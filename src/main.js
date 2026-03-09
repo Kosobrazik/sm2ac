@@ -8,7 +8,10 @@ const BASE_H = 480;
 const MODE_TRANSITION_MS = 2000;
 const MENU_MUSIC_VOLUME = 0.35;
 const MENU_INTRO_VIDEO_SRC = "./assets/video/menu/mmintro.webm";
-const STARTUP_INTRO_SEEN_KEY = "chp_startup_intros_seen_v1";
+const STARTUP_INTRO_SEEN_KEY = "chp_startup_intros_seen_v2";
+const ASSET_VERSION = "20260310-1";
+const MENU_SCRIPT_URL = `./assets/scripts/menu.txt?v=${ASSET_VERSION}`;
+
 const STARTUP_LOGO_INTROS = [
   { src: "./assets/video/logos/marvel.webm", label: "publisher intro (Marvel)" },
   { src: "./assets/video/logos/activision.webm", label: "publisher intro (Activision)" },
@@ -1031,7 +1034,7 @@ async function boot() {
 
   setupDebugReplayIntroButton(menuMusic);
   setupExternalMenuButtons();
-  const res = await fetch("./assets/scripts/menu.txt");
+  const res = await fetch(MENU_SCRIPT_URL);
   const txt = await res.text();
   const data = parseMenuScript(txt);
   const popupPlayer = createPopupPlayer();
@@ -1049,6 +1052,8 @@ boot().catch((err) => {
   console.error(err);
   setLog(`Launch error: ${err.message}`);
 });
+
+
 
 
 

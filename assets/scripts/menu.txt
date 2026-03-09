@@ -1,4 +1,4 @@
-BACKGROUND ART\menu\BACKGROUND.BMP
+﻿BACKGROUND ART\menu\BACKGROUND.BMP
 
 SET gCurrentGame = Menu
 set gsGameFileName = scripts\menu.txt
@@ -212,7 +212,7 @@ STORE Cafe CLICK            ENDIF
 *   Bank
 ********************
 SPRITENAME Bank
-ADDFRAME art\menu\Bank_h.bmp Over
+ADDFRAME art\menu\bank_h.bmp Over
 SPRITEFPS Bank 10
 SETPOSITION Bank 428 245 0
 CLICKWHENHIDDEN Bank TRUE
@@ -254,7 +254,7 @@ STORE Bank CLICK        ENDIF
 *   Bugle
 ********************
 SPRITENAME Bugle
-ADDFRAME art\menu\Bugle_h.bmp Over
+ADDFRAME art\menu\bugle_h.bmp Over
 SPRITEFPS Bugle 10
 SETPOSITION Bugle 492 61 0
 CLICKWHENHIDDEN Bugle TRUE
@@ -299,7 +299,7 @@ STORE Bugle CLICK       ENDIF
 *   College
 ********************
 SPRITENAME College
-ADDFRAME art\menu\College_h.bmp Over
+ADDFRAME art\menu\college_h.bmp Over
 SPRITEFPS College 10
 SETPOSITION College 308 375 0
 CLICKWHENHIDDEN College TRUE
