@@ -1,4 +1,4 @@
-const NAME_TOKEN_TO_VAR = {
+﻿const NAME_TOKEN_TO_VAR = {
   Exit: "sNameExit",
   Crawl: "sNameCrawl",
   Crook: "sNameCrook",
@@ -11,7 +11,7 @@ const NAME_TOKEN_TO_VAR = {
 };
 
 function normalizeAssetPath(path) {
-  return path.replace(/\\/g, "/");
+  return path.replace(/\\/g, "/").toLowerCase();
 }
 
 function toNumber(value) {
@@ -215,6 +215,7 @@ export function parseMenuScript(source) {
 
   return { items };
 }
+
 
 
 

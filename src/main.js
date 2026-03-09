@@ -1,4 +1,4 @@
-import { createBitmapScoreRenderer } from "./bitmap-score.js";
+﻿import { createBitmapScoreRenderer } from "./bitmap-score.js";
 import { parseMenuScript } from "./menu-parser.js";
 import { getMenuItemScore } from "./score-store.js";
 import { rememberPrintFrameForTargetScript } from "./print-store.js";
@@ -497,7 +497,8 @@ function setupDebugReplayIntroButton(menuMusic) {
 }
 
 function toAssetUrl(relativePath) {
-  return `./assets/${relativePath.replace(/^\/+/, "")}`;
+  const normalized = relativePath.replace(/\\/g, "/").replace(/^\/+/, "").toLowerCase();
+  return `./assets/${normalized}`;
 }
 
 function resolveOverlayPath(relativePath) {
@@ -1048,6 +1049,7 @@ boot().catch((err) => {
   console.error(err);
   setLog(`Launch error: ${err.message}`);
 });
+
 
 
 
