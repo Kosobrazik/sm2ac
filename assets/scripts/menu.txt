@@ -1,0 +1,592 @@
+BACKGROUND ART\menu\BACKGROUND.BMP
+
+SET gCurrentGame = Menu
+set gsGameFileName = scripts\menu.txt
+
+STOPSOUND gfAmbient
+
+STOPALLSOUNDS
+APPENDLOAD scripts\global.txt
+APPENDLOAD scripts\miss.txt
+HIDEVAR GAME_fPoints
+
+SET bChoseGame = 0
+SET gGameRestarted = 0
+
+VAR FLOAT sndMenuMain
+VAR STRING sNameExit
+VAR STRING sNameCrawl
+VAR STRING sNameCrook
+VAR STRING sNameHeist
+VAR STRING sNameLab
+VAR STRING sNameMugshot
+VAR STRING sNameWare
+VAR STRING sNameWebSling
+VAR STRING sNamePrint
+
+VAR FLOAT sndSpideyI
+VAR FLOAT sndDocOk
+
+SET sNameExit = Exit Game
+SET sNameCrawl = Wall Crawler
+SET sNameCrook = Catch the Crook
+SET sNameHeist = Cafe Attack
+SET sNameLab = Lab Work 101
+SET sNameMugshot = Mug Shot
+SET sNameWare = Warehouse Infiltration
+SET sNameWebSling = Web Slinger
+SET sNamePrint = Print Center
+
+VAR FLOAT fTextX1
+SET fTextX1 = 200
+
+VAR FLOAT sndMMenu
+VAR FLOAT sndLocation
+
+VAR FLOAT gCurrentHigh
+VAR FLOAT fWhichDocOk
+
+VAR FLOAT bDrawHigh
+SET bDrawHigh = 0
+
+STORE game DrawHigh IF PARAM2 = 1 THEN
+STORE game DrawHigh     SET GAME_fCurrentHigh = PARAM1
+STORE game DrawHigh     SET bDrawHigh = 1
+STORE game DrawHigh ELSE
+STORE game DrawHigh     SET bDrawHigh = 0
+STORE game DrawHigh ENDIF
+
+STORE game CLICK    IF gfSpideyTalk = 1 EXECUTE game SpideyDone
+STORE game CLICK    IF gfSpideyTalk = 1 SET gfSpideyTalk = 2
+
+STORE game SpideyDone STOPSOUND sndSpideyI
+STORE game SpideyDone HIDE SpideyBink
+STORE game SpideyDone TIMER game 1.0 tDocOc EXECUTE game DocOkTalk
+STORE game SpideyDone PLAYANIM Cursor ARROW
+
+STORE game DocOkTalk  IF gfSpideyTalk != 1 RETURN
+STORE game DocOkTalk  SET gfSpideyTalk = 2
+STORE game DocOkTalk  RANDOMEXCLUDE fWhichDocOk 1 3 
+STORE game DocOkTalk  IF gfSpideyTalk > 0 IF fWhichDocOk = 1 PLAYSOUND sndDocOk sounds\menu\mmdo001.wav FALSE
+STORE game DocOkTalk  IF gfSpideyTalk > 0 IF fWhichDocOk = 2 PLAYSOUND sndDocOk sounds\menu\mmdo002.wav FALSE
+STORE game DocOkTalk  IF gfSpideyTalk > 0 IF fWhichDocOk = 3 PLAYSOUND sndDocOk sounds\menu\mmdo003.wav FALSE
+
+STORE game DocOkTalk  TIMER game 3.75 tDocOc IF gfSpideyTalk > 0 PLAYSOUND sndDocOk sounds\menu\mmdo004.wav FALSE
+
+STORE game DocOkDone  IF gfSpideyTalk = 2 STOPSOUND sndDocOk
+STORE game DocOkDone  IF gfSpideyTalk = 2 SET gfSpideyTalk = 0
+
+
+STORE game esc IF bChoseGame = 99 RETURN
+STORE game esc EXECUTE won showsure
+
+********************
+*   Oscorp
+********************
+SPRITENAME Oscorp
+ADDFRAME art\menu\oscorp_h.bmp Over
+SPRITEFPS Oscorp 10
+SETPOSITION Oscorp 32 40 0
+CLICKWHENHIDDEN Oscorp TRUE
+HIDE Oscorp
+
+STORE Oscorp ROLLOVER	    IF bChoseGame = 99 RETURN
+STORE Oscorp ROLLOVER	    IF gfSpideyTalk = 2 EXECUTE game DocOkDone
+STORE Oscorp ROLLOVER	    IF gfSpideyTalk > 0 RETURN
+STORE Oscorp ROLLOVER	    SHOW Oscorp
+STORE Oscorp ROLLOVER	    PLAYSOUND sndMMenu sounds\moclick001.wav FALSE
+STORE Oscorp ROLLOVER 	    PLAYANIM Oscorp Over
+STORE Oscorp ROLLOVER 	    SHOW CUOscorp
+STORE Oscorp ROLLOVER 	    PLAYBINK CUOscorp Over
+STORE Oscorp ROLLOVER       STOPSOUND sndLocation
+STORE Oscorp ROLLOVER       PLAYONESOUND sndLocation SOUNDS\MENU\MMSM002.WAV FALSE
+STORE Oscorp ROLLOVER 	    SET V1 = 1
+STORE Oscorp ROLLOVER       SHOW NameBink
+STORE Oscorp ROLLOVER       PLAYBINK NameBink Crawl
+STORE Oscorp ROLLOVER       EXECUTE game DrawHigh gCrawlHigh 1
+
+STORE Oscorp UNROLLOVER	    IF gfSpideyTalk > 0 RETURN
+STORE Oscorp UNROLLOVER     HIDE Oscorp
+STORE Oscorp UNROLLOVER     HIDE CUOscorp
+STORE Oscorp UNROLLOVER     SET V1 = 0
+STORE Oscorp UNROLLOVER     HIDE NameBink
+STORE Oscorp UNROLLOVER     EXECUTE game DrawHigh gCrawlHigh 0
+
+STORE Oscorp CLICK          IF bChoseGame = 99 RETURN
+STORE Oscorp CLICK	        IF gfSpideyTalk = 1 RETURN
+STORE Oscorp CLICK 	        IF V1 = 1 THEN
+STORE Oscorp CLICK 	            PLAYSOUND sndMMenu sounds\CLICK001.wav FALSE
+STORE Oscorp CLICK 	            SET bChoseGame = 1
+STORE Oscorp CLICK 	            SET gLevelToLoad = 1
+STORE Oscorp CLICK 	            SET gGameToPrint = 0
+STORE Oscorp CLICK 	            FADEOUT LOAD scripts\crawl.txt
+STORE Oscorp CLICK          ENDIF
+
+********************
+*   PoliceHQ
+********************
+SPRITENAME PoliceHQ
+ADDFRAME art\menu\pizza_h.bmp Over
+SPRITEFPS PoliceHQ 10
+SETPOSITION PoliceHQ 181 277 0
+CLICKWHENHIDDEN PoliceHQ TRUE
+HIDE PoliceHQ
+HOTSPOTAREA PoliceHQ -10 0 70 65
+
+STORE PoliceHQ ROLLOVER	    IF bChoseGame = 99 RETURN
+STORE PoliceHQ ROLLOVER	    IF gfSpideyTalk = 2 EXECUTE game DocOkDone
+STORE PoliceHQ ROLLOVER	    IF gfSpideyTalk > 0 RETURN
+STORE PoliceHQ ROLLOVER	    SHOW PoliceHQ
+STORE PoliceHQ ROLLOVER	    PLAYSOUND sndMMenu sounds\moclick001.wav FALSE
+STORE PoliceHQ ROLLOVER     PLAYANIM PoliceHQ Over
+STORE PoliceHQ ROLLOVER 	SHOW CUpolice
+STORE PoliceHQ ROLLOVER 	PLAYBINK CUpolice Over
+STORE PoliceHQ ROLLOVER     STOPSOUND sndLocation
+STORE PoliceHQ ROLLOVER     PLAYONESOUND sndLocation SOUNDS\MENU\MMSM009.WAV FALSE
+STORE PoliceHQ ROLLOVER 	SET V1 = 2
+STORE PoliceHQ ROLLOVER     SHOW NameBink
+STORE PoliceHQ ROLLOVER     PLAYBINK NameBink MugShot
+STORE PoliceHQ ROLLOVER     EXECUTE game DrawHigh gMugShotHigh 1
+
+STORE PoliceHQ UNROLLOVER	IF gfSpideyTalk > 0 RETURN
+STORE PoliceHQ UNROLLOVER   HIDE PoliceHQ
+STORE PoliceHQ UNROLLOVER   HIDE CUpolice
+STORE PoliceHQ UNROLLOVER   SET V1 = 0
+STORE PoliceHQ UNROLLOVER   HIDE NameBink
+STORE PoliceHQ UNROLLOVER   EXECUTE game DrawHigh gMugShotHigh 0
+
+STORE PoliceHQ CLICK        IF bChoseGame = 99 RETURN
+STORE PoliceHQ CLICK        IF gfSpideyTalk = 1 RETURN
+STORE PoliceHQ CLICK 	    IF V1 = 2 THEN
+STORE PoliceHQ CLICK 	        PLAYSOUND sndMMenu sounds\CLICK001.wav FALSE
+STORE PoliceHQ CLICK 	        SET bChoseGame = 1
+STORE PoliceHQ CLICK 	        SET gLevelToLoad = 1
+STORE PoliceHQ CLICK 	        SET gGameToPrint = 4
+STORE PoliceHQ CLICK 	        FADEOUT LOAD scripts\mugshot.txt
+STORE PoliceHQ CLICK        ENDIF
+
+********************
+*   Cafe
+********************
+SPRITENAME Cafe
+ADDFRAME art\menu\jewelry_h.bmp Over
+SPRITEFPS Cafe 10
+SETPOSITION Cafe 198 195 0
+CLICKWHENHIDDEN Cafe TRUE
+HIDE Cafe
+HOTSPOTAREA Cafe 15 0 90 75
+
+STORE Cafe ROLLOVER	        IF bChoseGame = 99 RETURN
+STORE Cafe ROLLOVER	        IF gfSpideyTalk = 2 EXECUTE game DocOkDone
+STORE Cafe ROLLOVER	        IF gfSpideyTalk > 0 RETURN
+STORE Cafe ROLLOVER	        SHOW Cafe
+STORE Cafe ROLLOVER	        PLAYSOUND sndMenuMain sounds\moclick001.wav FALSE
+STORE Cafe ROLLOVER 	    PLAYANIM Cafe Over
+STORE Cafe ROLLOVER	        SHOW CUCafe
+STORE Cafe ROLLOVER 	    PLAYBINK CUCafe Over
+STORE Cafe ROLLOVER         STOPSOUND sndLocation
+STORE Cafe ROLLOVER         PLAYONESOUND sndLocation SOUNDS\MENU\MMSM004.WAV FALSE
+STORE Cafe ROLLOVER 	    SET V1 = 3
+STORE Cafe ROLLOVER         SHOW NameBink
+STORE Cafe ROLLOVER         PLAYBINK NameBink Cafe 
+STORE Cafe ROLLOVER         EXECUTE game DrawHigh gHeistHigh 1
+
+STORE Cafe UNROLLOVER	    IF gfSpideyTalk > 0 RETURN
+STORE Cafe UNROLLOVER       HIDE Cafe
+STORE Cafe UNROLLOVER       HIDE CUCafe
+STORE Cafe UNROLLOVER       SET V1 = 0
+STORE Cafe UNROLLOVER       HIDE NameBink
+STORE Cafe UNROLLOVER       EXECUTE game DrawHigh gHeistHigh 0
+
+STORE Cafe CLICK    	    IF bChoseGame = 99 RETURN
+STORE Cafe CLICK    	    IF gfSpideyTalk > 0 RETURN
+STORE Cafe CLICK            IF V1 = 3 THEN
+STORE Cafe CLICK 	            PLAYSOUND sndMMenu sounds\CLICK001.wav FALSE
+STORE Cafe CLICK 	            SET bChoseGame = 1
+STORE Cafe CLICK 	            SET gLevelToLoad = 1
+STORE Cafe CLICK 	            SET gGameToPrint = 2
+STORE Cafe CLICK 	            FADEOUT LOAD scripts\heist.txt
+STORE Cafe CLICK            ENDIF
+
+********************
+*   Bank
+********************
+SPRITENAME Bank
+ADDFRAME art\menu\Bank_h.bmp Over
+SPRITEFPS Bank 10
+SETPOSITION Bank 428 245 0
+CLICKWHENHIDDEN Bank TRUE
+HIDE Bank
+
+STORE Bank ROLLOVER	    IF bChoseGame = 99 RETURN
+STORE Bank ROLLOVER	    IF gfSpideyTalk = 2 EXECUTE game DocOkDone
+STORE Bank ROLLOVER	    IF gfSpideyTalk > 0 RETURN
+STORE Bank ROLLOVER	    SHOW Bank
+STORE Bank ROLLOVER	    PLAYSOUND sndMenuMain sounds\moclick001.wav FALSE
+STORE Bank ROLLOVER 	PLAYANIM Bank Over
+STORE Bank ROLLOVER	    SHOW CUBank
+STORE Bank ROLLOVER 	PLAYBINK CUBank Over
+STORE Bank ROLLOVER 	SET V1 = 4
+STORE Bank ROLLOVER     STOPSOUND sndLocation
+STORE Bank ROLLOVER     PLAYONESOUND sndLocation SOUNDS\MENU\MMSM005.WAV FALSE
+STORE Bank ROLLOVER     SHOW NameBink
+STORE Bank ROLLOVER     PLAYBINK NameBink Crook
+STORE Bank ROLLOVER     EXECUTE game DrawHigh gCrookHigh 1
+
+STORE Bank UNROLLOVER	IF gfSpideyTalk > 0 RETURN
+STORE Bank UNROLLOVER   HIDE Bank
+STORE Bank UNROLLOVER   HIDE CUBank
+STORE Bank UNROLLOVER   SET V1 = 0
+STORE Bank UNROLLOVER   HIDE NameBink
+STORE Bank UNROLLOVER   EXECUTE game DrawHigh gCrookHigh 0
+
+STORE Bank CLICK        IF bChoseGame = 99 RETURN
+STORE Bank CLICK        IF gfSpideyTalk > 0 RETURN
+STORE Bank CLICK 	    IF V1 = 4 THEN
+STORE Bank CLICK 	        PLAYSOUND sndMMenu sounds\CLICK001.wav FALSE
+STORE Bank CLICK 	        SET bChoseGame = 1
+STORE Bank CLICK 	        SET gLevelToLoad = 1
+STORE Bank CLICK 	        SET gGameToPrint = 1
+STORE Bank CLICK 	        FADEOUT LOAD scripts\crook.txt
+STORE Bank CLICK        ENDIF
+
+********************
+*   Bugle
+********************
+SPRITENAME Bugle
+ADDFRAME art\menu\Bugle_h.bmp Over
+SPRITEFPS Bugle 10
+SETPOSITION Bugle 492 61 0
+CLICKWHENHIDDEN Bugle TRUE
+HIDE Bugle
+HOTSPOTAREA Bugle 0 0 70 180
+
+STORE Bugle ROLLOVER    IF bChoseGame = 99 RETURN
+STORE Bugle ROLLOVER	IF gfSpideyTalk = 2 EXECUTE game DocOkDone
+STORE Bugle ROLLOVER	IF gfSpideyTalk > 0 RETURN
+STORE Bugle ROLLOVER	SHOW Bugle
+STORE Bugle ROLLOVER	PLAYSOUND sndMenuMain sounds\moclick001.wav FALSE
+STORE Bugle ROLLOVER 	PLAYANIM Bugle Over
+STORE Bugle ROLLOVER 	SHOW CUBugle 
+STORE Bugle ROLLOVER 	PLAYBINK CUBugle Over
+STORE Bugle ROLLOVER    STOPSOUND sndLocation
+STORE Bugle ROLLOVER    PLAYONESOUND sndLocation SOUNDS\MENU\MMSM001.WAV FALSE
+STORE Bugle ROLLOVER 	SET V1 = 5
+STORE Bugle ROLLOVER    SHOW NameBink
+STORE Bugle ROLLOVER    PLAYBINK NameBink Print
+STORE Bugle ROLLOVER    HIDEVAR gsHighScore 10
+STORE Bugle ROLLOVER    HIDEVAR GAME_fCurrentHigh 30
+STORE Bugle ROLLOVER    HIDEVAR GAME_fPoints
+
+STORE Bugle UNROLLOVER	IF gfSpideyTalk > 0 RETURN
+STORE Bugle UNROLLOVER  HIDE Bugle
+STORE Bugle UNROLLOVER  HIDE CUBugle 
+STORE Bugle UNROLLOVER  SET V1 = 0
+STORE Bugle UNROLLOVER  HIDE NameBink
+STORE Bugle UNROLLOVER  EXECUTE game DrawHigh gCrawlHigh 0
+STORE Bugle UNROLLOVER  CENTERVAR gsHighScore 10
+STORE Bugle UNROLLOVER  CENTERVAR GAME_fCurrentHigh 30
+
+STORE Bugle CLICK       IF bChoseGame = 99 RETURN
+STORE Bugle CLICK       IF gfSpideyTalk > 0 RETURN
+STORE Bugle CLICK 	    IF V1 = 5 THEN
+STORE Bugle CLICK 	        PLAYSOUND sndMMenu sounds\CLICK001.wav FALSE
+STORE Bugle CLICK 	        SET bChoseGame = 1
+STORE Bugle CLICK 	        FADEOUT LOAD scripts\print.txt
+STORE Bugle CLICK       ENDIF
+
+********************
+*   College
+********************
+SPRITENAME College
+ADDFRAME art\menu\College_h.bmp Over
+SPRITEFPS College 10
+SETPOSITION College 308 375 0
+CLICKWHENHIDDEN College TRUE
+HIDE College
+
+STORE College ROLLOVER	    IF bChoseGame = 99 RETURN
+STORE College ROLLOVER	    IF gfSpideyTalk = 2 EXECUTE game DocOkDone
+STORE College ROLLOVER	    IF gfSpideyTalk > 0 RETURN
+STORE College ROLLOVER	    SHOW College
+STORE College ROLLOVER	    PLAYSOUND sndMenuMain sounds\moclick001.wav FALSE
+STORE College ROLLOVER 	    PLAYANIM college Over
+STORE College ROLLOVER	    SHOW CUcollege
+STORE College ROLLOVER 	    PLAYBINK CUcollege Over
+STORE College ROLLOVER      STOPSOUND sndLocation
+STORE College ROLLOVER      PLAYONESOUND sndLocation SOUNDS\MENU\MMSM006.WAV FALSE
+STORE College ROLLOVER 	    SET V1 = 6
+STORE College ROLLOVER      SHOW NameBink
+STORE College ROLLOVER      PLAYBINK NameBink Lab
+STORE College ROLLOVER      EXECUTE game DrawHigh gLabHigh 1
+
+STORE College UNROLLOVER	IF gfSpideyTalk > 0 RETURN
+STORE College UNROLLOVER    HIDE college
+STORE College UNROLLOVER    HIDE CUCollege
+STORE College UNROLLOVER    SET V1 = 0
+STORE College UNROLLOVER    HIDE NameBink
+STORE College UNROLLOVER    EXECUTE game DrawHigh gLabHigh 0
+
+STORE College CLICK         IF bChoseGame = 99 RETURN
+STORE College CLICK         IF gfSpideyTalk > 0 RETURN
+STORE College CLICK 	    IF V1 = 6 THEN
+STORE College CLICK 	        PLAYSOUND sndMMenu sounds\CLICK001.wav FALSE
+STORE College CLICK 	        SET bChoseGame = 1
+STORE College CLICK 	        SET gGameToPrint = 3
+STORE College CLICK 	        SET gLevelToLoad = 1
+STORE College CLICK 	        FADEOUT LOAD scripts\lab101.txt
+STORE College CLICK         ENDIF
+
+********************
+*   Downtown
+********************
+SPRITENAME Downtown
+ADDFRAME art\menu\downt_h.bmp Over
+SPRITEFPS Downtown 10
+SETPOSITION Downtown 245 0 0
+CLICKWHENHIDDEN Downtown TRUE
+HIDE Downtown
+HOTSPOTAREA Downtown 0 0 110 180
+
+STORE Downtown ROLLOVER	    IF bChoseGame = 99 RETURN
+STORE Downtown ROLLOVER	    IF gfSpideyTalk = 2 EXECUTE game DocOkDone
+STORE Downtown ROLLOVER	    IF gfSpideyTalk > 0 RETURN
+STORE Downtown ROLLOVER	    SHOW Downtown
+STORE Downtown ROLLOVER	    PLAYSOUND sndMenuMain sounds\moclick001.wav FALSE
+STORE Downtown ROLLOVER     PLAYANIM Downtown Over
+STORE Downtown ROLLOVER 	SHOW CUDowntown
+STORE Downtown ROLLOVER 	PLAYBINK CUDowntown  Over
+STORE Downtown ROLLOVER     STOPSOUND sndLocation
+STORE Downtown ROLLOVER     PLAYONESOUND sndLocation SOUNDS\MENU\MMSM008.WAV FALSE
+STORE Downtown ROLLOVER     SET V1 = 7
+STORE Downtown ROLLOVER     SHOW NameBink
+STORE Downtown ROLLOVER     PLAYBINK NameBink WebSling
+STORE Downtown ROLLOVER     EXECUTE game DrawHigh gWebSlingHigh 1
+
+STORE Downtown UNROLLOVER	IF gfSpideyTalk > 0 RETURN
+STORE Downtown UNROLLOVER   HIDE Downtown
+STORE Downtown UNROLLOVER   HIDE CUDowntown
+STORE Downtown UNROLLOVER   SET V1 = 0
+STORE Downtown UNROLLOVER   HIDE NameBink
+STORE Downtown UNROLLOVER   EXECUTE game DrawHigh gWebSlingHigh 0
+
+STORE Downtown CLICK        IF bChoseGame = 99 RETURN
+STORE Downtown CLICK        IF gfSpideyTalk > 0 RETURN
+STORE Downtown CLICK 	    IF V1 = 7 THEN
+STORE Downtown CLICK 	        PLAYSOUND sndMMenu sounds\CLICK001.wav FALSE
+STORE Downtown CLICK 	        SET bChoseGame = 1
+STORE Downtown CLICK 	        SET gLevelToLoad = 1
+STORE Downtown CLICK 	        SET gGameToPrint = 6
+STORE Downtown CLICK 	        FADEOUT LOAD scripts\websling.txt
+STORE Downtown CLICK        ENDIF
+
+********************
+*   Warehouse
+********************
+SPRITENAME Warehouse
+ADDFRAME art\menu\wareinfilt_h.bmp Over
+SPRITEFPS Warehouse 10
+SETPOSITION Warehouse 0 307 0
+CLICKWHENHIDDEN Warehouse TRUE
+HIDE Warehouse
+*HOTSPOTAREA WAREHOUSE -130 -50 210 180
+
+STORE Warehouse ROLLOVER	IF bChoseGame = 99 RETURN
+STORE Warehouse ROLLOVER	IF gfSpideyTalk = 2 EXECUTE game DocOkDone
+STORE Warehouse ROLLOVER	IF gfSpideyTalk > 0 RETURN
+STORE Warehouse ROLLOVER    SHOW Warehouse
+STORE Warehouse ROLLOVER    PLAYSOUND sndMenuMain sounds\moclick001.wav FALSE
+STORE Warehouse ROLLOVER    PLAYANIM Warehouse Over
+STORE Warehouse ROLLOVER 	SHOW CUWarehouse
+STORE Warehouse ROLLOVER 	PLAYBINK CUWarehouse Over
+STORE Warehouse ROLLOVER    STOPSOUND sndLocation
+STORE Warehouse ROLLOVER    PLAYONESOUND sndLocation SOUNDS\MENU\MMSM007.WAV FALSE
+STORE Warehouse ROLLOVER    SET V1 = 8
+STORE Warehouse ROLLOVER       SHOW NameBink
+STORE Warehouse ROLLOVER       PLAYBINK NameBink Ware
+STORE Warehouse ROLLOVER    EXECUTE game DrawHigh gWareHigh 1
+
+STORE Warehouse UNROLLOVER	IF gfSpideyTalk > 0 RETURN
+STORE Warehouse UNROLLOVER  HIDE Warehouse
+STORE Warehouse UNROLLOVER  HIDE CUWarehouse
+STORE Warehouse UNROLLOVER  SET V1 = 0
+STORE Warehouse UNROLLOVER  HIDE NameBink
+STORE Warehouse UNROLLOVER  EXECUTE game DrawHigh gWareHigh 0
+
+STORE Warehouse CLICK	    IF bChoseGame = 99 RETURN
+STORE Warehouse CLICK	    IF gfSpideyTalk > 0 RETURN
+STORE Warehouse CLICK 	    IF V1 = 8 THEN
+STORE Warehouse CLICK 	        PLAYSOUND sndMMenu sounds\CLICK001.wav FALSE
+STORE Warehouse CLICK 	        SET bChoseGame = 1
+STORE Warehouse CLICK 	        SET gGameToPrint = 5
+STORE Warehouse CLICK 	        SET gLevelToLoad = 1
+STORE Warehouse CLICK 	        FADEOUT LOAD scripts\ware.txt
+STORE Warehouse CLICK       ENDIF
+
+
+VAR FLOAT OverX
+VAR FLOAT OverY
+SET OverX = 220
+SET OverY = 289
+
+********************
+*  CUBank
+********************
+SPRITENAME CUBank
+ADDBINK CUBank art\menu\menu_popups\banksml.bik over
+SPRITEFPS CUBank 1
+SETPOSITION CUBank OverX OverY 0
+HIDE CUBank
+*CANLOOP CUBank over
+
+STORE CUBank BINKEND PLAYBINK CUBank over
+
+********************
+*  CUPolice
+********************
+SPRITENAME CUpolice
+ADDBINK CUPolice art\menu\menu_popups\police.bik over
+SPRITEFPS CUpolice 1
+SETPOSITION CUpolice OverX OverY 0
+HIDE CUpolice 
+*CANLOOP CUpolice over
+
+STORE CUpolice BINKEND PLAYBINK CUpolice over
+
+********************
+*  CUcollege
+********************
+SPRITENAME CUcollege
+ADDBINK CUCollege art\menu\menu_popups\college.bik over
+SPRITEFPS CUcollege 1
+SETPOSITION CUcollege OverX OverY 0
+HIDE CUcollege
+*CANLOOP CUcollege over
+
+STORE CUcollege BINKEND PLAYBINK CUcollege over
+
+
+********************
+*  CUCafe
+********************
+SPRITENAME CUCafe
+ADDBINK CUCafe art\menu\menu_popups\jewelrysml.bik over
+SPRITEFPS CUCafe 1
+SETPOSITION CUCafe OverX OverY 0
+HIDE CUCafe
+*CANLOOP CUCafe over
+
+STORE CUCafe BINKEND PLAYBINK CUCafe over
+
+********************
+*  CUOscorp
+********************
+SPRITENAME CUOscorp
+ADDBINK CUOscorp art\menu\menu_popups\Oscorp.bik over
+SPRITEFPS CUOscorp 1
+SETPOSITION CUOscorp OverX OverY 0
+HIDE CUOscorp
+*CANLOOP CUOscorp over
+
+STORE CUOscorp BINKEND PLAYBINK CUOscorp over
+
+********************
+*  CUWarehouse
+********************
+SPRITENAME CUWarehouse
+ADDBINK CUWarehouse art\menu\menu_popups\warehs.bik over
+SPRITEFPS CUWarehouse 1
+SETPOSITION CUWarehouse OverX OverY 0
+HIDE CUWarehouse
+*CANLOOP CUWarehouse over
+
+STORE CUWarehouse BINKEND PLAYBINK CUWarehouse over
+
+********************
+*  CUDowntown
+********************
+SPRITENAME CUDowntown
+ADDBINK CUDowntown art\menu\menu_popups\downtn.bik over
+SPRITEFPS CUDowntown 1
+SETPOSITION CUDowntown OverX OverY 0
+HIDE CUDowntown
+*CANLOOP CUDowntown over
+
+STORE CUDowntown BINKEND PLAYBINK CUDowntown over
+
+********************
+*  CUBugle
+********************
+SPRITENAME CUBugle
+ADDBINK CUBugle art\menu\menu_popups\bugle.bik over
+SPRITEFPS CUBugle 1
+SETPOSITION CUBugle OverX OverY 0
+HIDE CUBugle
+*CANLOOP CUBugle over
+
+STORE CUBugle BINKEND PLAYBINK CUBugle over
+
+********************
+SPRITENAME quit
+ADDFRAME quit art\ui\exit.bmp wait
+ADDFRAME quit art\ui\exit_over.bmp glow
+SPRITEFPS quit 15
+PLAYANIM quit wait
+SETPOSITION quit 10 410 0
+SHOW quit
+
+STORE quit ROLLOVER IF bChoseGame = 0 PLAYANIM quit glow
+STORE quit ROLLOVER IF bChoseGame = 0 PLAYSOUND sndMenuMain sounds\moclick001.wav FALSE
+STORE quit ROLLOVER IF bChoseGame = 0 SHOW NameBink
+STORE quit ROLLOVER IF bChoseGame = 0 PLAYBINK NameBink Exit
+
+STORE quit UNROLLOVER IF bChoseGame = 0 PLAYANIM quit wait
+STORE quit UNROLLOVER IF bChoseGame = 0 HIDE NameBink
+
+store quit click	if bChoseGame != 0 RETURN
+store quit click	PLAYSOUND sndMMenu sounds\CLICK001.wav FALSE
+store quit click	EXECUTE game SaveScores
+store quit click	EXECUTE game ESC
+
+SPRITENAME NameBink
+ADDBINK NameBink art\menu\cafe_over.bik Cafe
+ADDBINK NameBink art\menu\catchcrook_over.bik Crook
+ADDBINK NameBink art\menu\lab_over.bik Lab
+ADDBINK NameBink art\menu\mugshot_over.bik MugShot
+ADDBINK NameBink art\menu\printcntr_over.bik Print
+ADDBINK NameBink art\menu\wallcrawl_over.bik Crawl
+ADDBINK NameBink art\menu\wareinfilt_over.bik Ware
+ADDBINK NameBink art\menu\websling_over.bik WebSling
+ADDBINK NameBink art\menu\exit_over.bik Exit
+
+CANLOOP NameBink Cafe
+CANLOOP NameBink Crook
+CANLOOP NameBink Lab
+CANLOOP NameBink MugShot
+CANLOOP NameBink Print
+CANLOOP NameBink Crawl
+CANLOOP NameBink Ware
+CANLOOP NameBink WebSling
+CANLOOP NameBink Exit
+
+SPRITEFPS NameBink 10
+SETPOSITION NameBink 72 436 0
+HIDE NameBink
+
+SPRITENAME SpideyBink
+ADDBINK SpideyBink Art/menu/mmintro.bik SpideyHang
+SETPOSITION SpideyBink 0 0 0
+USESCREENCOORD SpideyBink
+
+STORE SpideyBink BINKEND EXECUTE game SpideyDone
+
+APPENDLOAD scripts\cursor.txt
+
+MUSIC sounds\menu\mmloop001.wav
+IF gfSpideyTalk = 1 PLAYBINK SpideyBink SpideyHang
+IF gfSpideyTalk = 1 PLAYANIM Cursor PIXEL
+SET gStoredScore = 0
+SET gCurrentScore = 0
+SET bDisableBook = 0
+SET gbBinkPlaying = 0
+FADEIN

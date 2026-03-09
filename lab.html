@@ -1,0 +1,403 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <link rel="icon" href="/icon.ico?v=2" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Work 101</title>
+  <style>
+    @font-face {
+      font-family: "Homoarakhn";
+      src: url("./assets/fonts/homoarakhn.regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --hud-text-font: Tahoma, Arial, "Segoe UI", sans-serif;
+      --hud-number-font: "Small Fonts", "MS Sans Serif", Tahoma, "Arial Black", sans-serif;
+      --panel-bg: rgba(4, 10, 17, 0.86);
+      --panel-border: rgba(170, 198, 228, 0.42);
+      --panel-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+      --pixel-shadow: -2px 0 #000, 2px 0 #000, 0 -2px #000, 0 2px #000;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at top, rgba(43, 64, 92, 0.46), transparent 44%),
+        linear-gradient(180deg, #09101a 0%, #05080f 100%);
+      font-family: "Homoarakhn", "Segoe UI", sans-serif;
+      color: #eef5ff;
+      overflow: hidden;
+    }
+
+    .game-wrap {
+      width: min(100vw, 980px);
+      aspect-ratio: 4 / 3;
+      border: 2px solid #32425b;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+      cursor: none;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.6);
+    }
+
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 640px;
+      height: 480px;
+      transform-origin: top left;
+      overflow: hidden;
+    }
+
+    .sprite,
+    .cursor,
+    .pause-bg,
+    .pause-highlight,
+    .confirm-bg,
+    .confirm-highlight,
+    .intro-image {
+      position: absolute;
+      image-rendering: pixelated;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .sprite { pointer-events: none; }
+    .interactive { pointer-events: auto; cursor: pointer; }
+    .hidden { display: none !important; }
+
+    .lab-bg,
+    .intro-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      image-rendering: pixelated;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
+    .ambient-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 8;
+      overflow: hidden;
+    }
+
+    .ambient-video {
+      position: absolute;
+      image-rendering: pixelated;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      opacity: 0.8;
+    }
+    .hud {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 70;
+    }
+
+    .score-title-art {
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%);
+      image-rendering: pixelated;
+      pointer-events: none;
+    }
+    .hud-block {
+      position: absolute;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+      pointer-events: none;
+    }
+
+    .hud-block.score { left: 50%; top: 12px; transform: translateX(-50%); text-align: center; width: 140px; }
+    .hud-block.time { right: 16px; top: 18px; text-align: right; }
+    .hud-block.round { left: 16px; top: 18px; }
+    .hud-label { display: none; }
+
+    .hud-value {
+      color: #f7fbff;
+      font-family: var(--hud-number-font);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1;
+      text-shadow: var(--pixel-shadow);
+    }
+
+    .hud-text {
+      color: #f7fbff;
+      font-family: var(--hud-text-font);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      line-height: 1.2;
+      text-shadow: var(--pixel-shadow);
+    }
+
+    .hud-block.score .hud-value,
+    .hud-block.score .bitmap-score { margin-top: 18px; }
+
+    .hud-block.time .hud-value,
+    .hud-block.time .bitmap-score { justify-content: flex-end; }
+
+    .bitmap-score {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      justify-content: center;
+      min-height: 18px;
+    }
+
+    .bitmap-score-digit {
+      display: block;
+      flex: none;
+      image-rendering: pixelated;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .bitmap-score-fallback-hidden { display: none !important; }
+
+    .lives {
+      position: absolute;
+      left: 16px;
+      top: 69px;
+      display: flex;
+      gap: 4px;
+      pointer-events: none;
+    }
+
+    .life {
+      width: 24px;
+      height: 24px;
+      image-rendering: pixelated;
+      filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.45));
+    }
+
+    .life.is-empty { opacity: 0.18; filter: grayscale(1) brightness(0.7); }
+
+    .recipe-layer { position: absolute; inset: 0; z-index: 63; pointer-events: none; }
+
+    .target-hint { opacity: 0.46; }
+
+    .scene-hit {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      z-index: 90;
+    }
+
+    .sprite.is-selected {
+      transform: translateY(-2px) scale(1.04);
+      filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.45));
+    }
+
+    .intro-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 220;
+      opacity: 1;
+      transition: opacity 380ms ease, transform 380ms ease;
+      background: #000;
+    }
+
+    .intro-overlay.fade-out { opacity: 0; transform: scale(1.02); }
+
+    .intro-arrow {
+      position: absolute;
+      left: 495px;
+      top: 388px;
+      image-rendering: pixelated;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: transform 120ms ease;
+    }
+
+    .intro-arrow:hover { transform: scale(1.03); }
+
+    .pause-layer,
+    .confirm-layer { position: absolute; inset: 0; z-index: 210; }
+
+    .pause-bg,
+    .pause-highlight,
+    .confirm-bg,
+    .confirm-highlight { pointer-events: none; }
+
+    .pause-hit,
+    .confirm-hit {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .pause-hit:focus-visible,
+    .confirm-hit:focus-visible,
+    .result-action:focus-visible { outline: 1px solid rgba(255, 255, 255, 0.8); outline-offset: 1px; }
+
+    .result-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 230;
+      display: grid;
+      place-items: center;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(4px);
+    }
+
+    .result-panel {
+      width: min(88%, 360px);
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(184, 210, 238, 0.42);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(12, 23, 37, 0.96), rgba(5, 10, 17, 0.96));
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.54);
+      text-align: center;
+    }
+
+    .result-title { margin: 0 0 8px; color: #f4f9ff; font-size: 20px; letter-spacing: 0.8px; text-shadow: var(--pixel-shadow); }
+    .result-body { margin: 0 0 16px; color: #cad7e7; font-family: var(--hud-text-font); font-size: 13px; line-height: 1.45; }
+    .result-actions { display: flex; justify-content: center; gap: 10px; }
+
+    .result-action {
+      min-width: 112px;
+      padding: 8px 14px 9px;
+      border: 1px solid rgba(173, 198, 227, 0.4);
+      border-radius: 999px;
+      background: rgba(19, 33, 52, 0.95);
+      color: #f3f8ff;
+      font-family: var(--hud-text-font);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease;
+    }
+
+    .result-action:hover { transform: translateY(-1px); background: rgba(31, 52, 78, 0.98); }
+
+    .cursor {
+      width: 40px;
+      height: 40px;
+      transform: translate(-4px, -4px);
+      pointer-events: none;
+      z-index: 260;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-wrap" id="gameWrap">
+    <div id="root">
+      <img class="lab-bg" src="./legacy/art/lab/backgrounds/backgroundl3.bmp" alt="Р›Р°Р±РѕСЂР°С‚РѕСЂРёСЏ" />
+            <div class="ambient-layer">
+        <video id="ambientRain" class="ambient-video" style="left: 0; top: 0; width: 58px; height: 140px;" muted playsinline loop preload="auto">
+          <source src="./assets/video/lab/background/rain_l2bg.webm" type="video/webm" />
+        </video>
+        <video id="ambientDrip" class="ambient-video" style="left: 102px; top: 175px; width: 10px; height: 105px;" muted playsinline preload="auto">
+          <source src="./assets/video/lab/background/drip_l2bg.webm" type="video/webm" />
+        </video>
+        <video id="ambientShower" class="ambient-video" style="left: 615px; top: 18px; width: 25px; height: 140px;" muted playsinline preload="auto">
+          <source src="./assets/video/lab/background/shwr_l2bg.webm" type="video/webm" />
+        </video>
+        <video id="ambientBubble" class="ambient-video" style="left: 205px; top: 137px; width: 33px; height: 112px;" muted playsinline loop preload="auto">
+          <source src="./assets/video/lab/background/bubble_l2bg.webm" type="video/webm" />
+        </video>
+      </div>
+
+      <div id="sceneLayer"></div>
+      <div id="recipeLayer" class="recipe-layer"></div>
+
+      <div class="hud">
+        <div class="hud-block round">
+          <span class="hud-label">Р­РєСЃРїРµСЂРёРјРµРЅС‚</span>
+          <div id="roundText" class="hud-text">1 / 16</div>
+        </div>
+
+        <div class="hud-block score">
+          <img class="score-title-art" src="./assets/art/ui/score_ru.png" alt="" />
+          <div id="scoreFallback" class="hud-value">0</div>
+          <div id="scoreBitmap" class="bitmap-score"></div>
+        </div>
+
+        <div class="hud-block time">
+          <span class="hud-label">Р’СЂРµРјСЏ</span>
+          <div id="timeFallback" class="hud-value">90</div>
+          <div id="timeBitmap" class="bitmap-score"></div>
+        </div>
+
+        <div id="lives" class="lives" aria-label="Р–РёР·РЅРё"></div>
+      </div>
+
+      <div id="introOverlay" class="intro-overlay hidden" aria-live="polite">
+        <img id="introImage" class="intro-image" src="./assets/art/ui/help/help4lab.bmp" alt="РРЅСЃС‚СЂСѓРєС‚Р°Р¶ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё" />
+        <img id="introContinue" class="intro-arrow" src="./assets/art/ui/help/playover.bmp" alt="РџСЂРѕРґРѕР»Р¶РёС‚СЊ" />
+      </div>
+
+      <div id="pauseMenuOverlay" class="pause-layer hidden" aria-live="polite">
+        <img class="pause-bg" src="./assets/art/ui/menu.bmp" alt="РњРµРЅСЋ РїР°СѓР·С‹" style="left: 188px; top: 70px;" />
+        <img id="pauseResumeOverlay" class="pause-highlight hidden" src="./assets/art/ui/resumeover.bmp" alt="" style="left: 213px; top: 111px;" />
+        <button id="pauseResumeHit" class="pause-hit" type="button" aria-label="РџСЂРѕРґРѕР»Р¶РёС‚СЊ" style="left: 213px; top: 111px; width: 210px; height: 59px;"></button>
+        <img id="pauseRestartOverlay" class="pause-highlight hidden" src="./assets/art/ui/restartover.bmp" alt="" style="left: 200px; top: 173px;" />
+        <button id="pauseRestartHit" class="pause-hit" type="button" aria-label="Р—Р°РЅРѕРІРѕ" style="left: 200px; top: 173px; width: 239px; height: 61px;"></button>
+        <img id="pauseHelpOverlay" class="pause-highlight hidden" src="./assets/art/ui/helpover.bmp" alt="" style="left: 232px; top: 237px;" />
+        <button id="pauseHelpHit" class="pause-hit" type="button" aria-label="РџРѕРјРѕС‰СЊ" style="left: 232px; top: 237px; width: 159px; height: 61px;"></button>
+        <img id="pauseMainMenuOverlay" class="pause-highlight hidden" src="./assets/art/ui/mainover.bmp" alt="" style="left: 195px; top: 301px;" />
+        <button id="pauseMainMenuHit" class="pause-hit" type="button" aria-label="Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ" style="left: 195px; top: 301px; width: 249px; height: 60px;"></button>
+      </div>
+
+      <div id="pauseConfirmOverlay" class="confirm-layer hidden" aria-live="polite">
+        <img class="confirm-bg" src="./assets/art/global/areyousure.png" alt="Р’С‹ СѓРІРµСЂРµРЅС‹?" style="left: 181px; top: 170px;" />
+        <img id="pauseConfirmYesOverlay" class="confirm-highlight hidden" src="./assets/art/global/yesover.bmp" alt="" style="left: 240px; top: 244px;" />
+        <button id="pauseConfirmYesHit" class="confirm-hit" type="button" aria-label="Р”Р°" style="left: 240px; top: 244px; width: 83px; height: 35px;"></button>
+        <img id="pauseConfirmNoOverlay" class="confirm-highlight hidden" src="./assets/art/global/noover.bmp" alt="" style="left: 322px; top: 243px;" />
+        <button id="pauseConfirmNoHit" class="confirm-hit" type="button" aria-label="РќРµС‚" style="left: 322px; top: 243px; width: 58px; height: 35px;"></button>
+      </div>
+
+      <div id="resultOverlay" class="result-overlay hidden" aria-live="polite">
+        <div class="result-panel">
+          <h1 id="resultTitle" class="result-title">Р›Р°Р±РѕСЂР°С‚РѕСЂРёСЏ РіРѕС‚РѕРІР°</h1>
+          <p id="resultBody" class="result-body"></p>
+          <div class="result-actions">
+            <button id="resultRestart" class="result-action" type="button">Р—Р°РЅРѕРІРѕ</button>
+            <button id="resultMenu" class="result-action" type="button">Р’ РјРµРЅСЋ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img id="cursor" class="cursor" src="./assets/art/global/cursor/arrow2_trim.png" alt="cursor" />
+  </div>
+
+  <script type="module" src="./src/lab.js"></script>
+</body>
+</html>
+

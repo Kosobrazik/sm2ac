@@ -1,0 +1,1919 @@
+﻿{
+    "generatedAt":  "2026-03-09T12:56:43Z",
+    "sourceRoot":  "original assets/Art/WallCrawl",
+    "outputs":  {
+                    "artRoot":  "assets/art/crawl",
+                    "videoRoot":  "assets/video/crawl"
+                },
+    "summary":  {
+                    "images":  {
+                                   "total":  352,
+                                   "converted":  0,
+                                   "skipped":  352
+                               },
+                    "videos":  {
+                                   "total":  27,
+                                   "converted":  0,
+                                   "skipped":  27
+                               }
+                },
+    "images":  [
+                   {
+                       "category":  "background",
+                       "source":  "original assets/Art/WallCrawl/bldA.bmp",
+                       "target":  "assets/art/crawl/bldA.png"
+                   },
+                   {
+                       "category":  "background",
+                       "source":  "original assets/Art/WallCrawl/bldB.bmp",
+                       "target":  "assets/art/crawl/bldB.png"
+                   },
+                   {
+                       "category":  "background",
+                       "source":  "original assets/Art/WallCrawl/BldC.BMP",
+                       "target":  "assets/art/crawl/BldC.png"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/Layerobjects/Cables.bmp",
+                       "target":  "assets/art/crawl/BuildingAFluff/Layerobjects/Cables.png"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/Layerobjects/Drain1.bmp",
+                       "target":  "assets/art/crawl/BuildingAFluff/Layerobjects/Drain1.png"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/Layerobjects/Drain2.bmp",
+                       "target":  "assets/art/crawl/BuildingAFluff/Layerobjects/Drain2.png"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/Layerobjects/Line.bmp",
+                       "target":  "assets/art/crawl/BuildingAFluff/Layerobjects/Line.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0000.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0000.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0001.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0001.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0002.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0002.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0003.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0003.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0004.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0004.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0005.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0005.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0006.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0006.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0007.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0007.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0008.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0008.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0009.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0009.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdLR0010.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdLR0010.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0000.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0000.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0001.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0001.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0002.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0002.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0003.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0003.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0004.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0004.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0005.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0005.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0006.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0006.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0007.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0007.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0008.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0008.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0009.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0009.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/BirdLR/birdRL0010.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/BirdLR/birdRL0010.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10000.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10000.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10001.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10001.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10002.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10002.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10003.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10003.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10004.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10004.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10005.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10005.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10006.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10006.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10007.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10007.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10008.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10008.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10009.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10009.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10010.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10010.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10011.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10011.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10012.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10012.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10013.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10013.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10014.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10014.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10015.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10015.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10016.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10016.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10017.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10017.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10018.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10018.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10019.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10019.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10020.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10020.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10021.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10021.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10022.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10022.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10023.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10023.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10024.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10024.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10025.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10025.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10026.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10026.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10027.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10027.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10028.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10028.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10029.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10029.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/ban10030.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/ban10030.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/gar01.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/gar01.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/gar02.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/objectlayers/gar02.png"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/People/WasherWIRES.bmp",
+                       "target":  "assets/art/crawl/BuildingBFluff/People/WasherWIRES.png"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/objectlayers/FPL.bmp",
+                       "target":  "assets/art/crawl/BuildingCfluff/objectlayers/FPL.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0000.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0000.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0001.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0001.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0002.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0002.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0003.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0003.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0004.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0004.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0005.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0005.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0006.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0006.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0007.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0007.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0008.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0008.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0009.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0009.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0010.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0010.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlDown/crawlDown0011.bmp",
+                       "target":  "assets/art/crawl/CrawlDown/crawlDown0011.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0000.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0000.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0001.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0001.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0002.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0002.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0003.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0003.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0004.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0004.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0005.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0005.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0006.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0006.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0007.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0007.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0008.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0008.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0009.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0009.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0010.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0010.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLLEFT/crawlLEFT0011.bmp",
+                       "target":  "assets/art/crawl/CRAWLLEFT/crawlLEFT0011.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0000.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0000.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0001.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0001.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0002.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0002.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0003.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0003.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0004.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0004.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0005.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0005.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0006.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0006.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0007.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0007.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0008.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0008.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0009.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0009.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0010.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0010.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CRAWLRIGHT/crawlRight0011.bmp",
+                       "target":  "assets/art/crawl/CRAWLRIGHT/crawlRight0011.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0000.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0000.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0001.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0001.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0002.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0002.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0003.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0003.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0004.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0004.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0005.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0005.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0006.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0006.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0007.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0007.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0008.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0008.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0009.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0009.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0010.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0010.png"
+                   },
+                   {
+                       "category":  "spidey-crawl",
+                       "source":  "original assets/Art/WallCrawl/CrawlUP/crawlUP0011.bmp",
+                       "target":  "assets/art/crawl/CrawlUP/crawlUP0011.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0000.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0000.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0001.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0001.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0002.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0002.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0003.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0003.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0004.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0004.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0005.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0005.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0006.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0006.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0007.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0007.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0008.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0008.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0009.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0009.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0010.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0010.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0011.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0011.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0012.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0012.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0013.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0013.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0014.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0014.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0015.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0015.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0016.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0016.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0017.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0017.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0018.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0018.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0019.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0019.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0020.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0020.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0021.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0021.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0022.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0022.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0023.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0023.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0024.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0024.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0025.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0025.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0026.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0026.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0027.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0027.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0028.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0028.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0029.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0029.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0030.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0030.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0031.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0031.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyDown0032.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyDown0032.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0000.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0000.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0001.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0001.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0002.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0002.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0003.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0003.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0004.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0004.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0005.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0005.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0006.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0006.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0007.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0007.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0008.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0008.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0009.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0009.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0010.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0010.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0011.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0011.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0012.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0012.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0013.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0013.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0014.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0014.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0015.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0015.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0016.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0016.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0017.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0017.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0018.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0018.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0019.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0019.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0020.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0020.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0021.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0021.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0022.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0022.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0023.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0023.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0024.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0024.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0025.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0025.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0026.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0026.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0027.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0027.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0028.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0028.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0029.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0029.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0030.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0030.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0031.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0031.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyLEFT0032.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyLEFT0032.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0000.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0000.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0001.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0001.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0002.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0002.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0003.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0003.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0004.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0004.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0005.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0005.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0006.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0006.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0007.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0007.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0008.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0008.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0009.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0009.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0010.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0010.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0011.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0011.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0012.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0012.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0013.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0013.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0014.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0014.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0015.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0015.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0016.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0016.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0017.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0017.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0018.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0018.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0019.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0019.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0020.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0020.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0021.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0021.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0022.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0022.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0023.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0023.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0024.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0024.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0025.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0025.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0026.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0026.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0027.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0027.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0028.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0028.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0029.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0029.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0030.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0030.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0031.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0031.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyRIGHT0032.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyRIGHT0032.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0000.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0000.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0001.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0001.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0002.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0002.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0003.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0003.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0004.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0004.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0005.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0005.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0006.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0006.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0007.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0007.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0008.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0008.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0009.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0009.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0010.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0010.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0011.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0011.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0012.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0012.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0013.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0013.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0014.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0014.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0015.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0015.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0016.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0016.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0017.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0017.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0018.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0018.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0019.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0019.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0020.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0020.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0021.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0021.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0022.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0022.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0023.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0023.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0024.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0024.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0025.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0025.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0026.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0026.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0027.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0027.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0028.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0028.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0029.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0029.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0030.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0030.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0031.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0031.png"
+                   },
+                   {
+                       "category":  "spidey-dizzy",
+                       "source":  "original assets/Art/WallCrawl/DIZZY/DizzyUP0032.bmp",
+                       "target":  "assets/art/crawl/DIZZY/DizzyUP0032.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0000.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0000.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0001.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0001.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0002.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0002.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0003.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0003.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0004.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0004.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0005.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0005.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0006.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0006.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0007.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0007.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0008.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0008.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0009.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0009.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0010.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0010.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0011.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0011.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnleft/TurnLEFT0012.bmp",
+                       "target":  "assets/art/crawl/turnleft/TurnLEFT0012.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0000.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0000.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0001.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0001.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0002.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0002.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0003.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0003.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0004.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0004.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0005.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0005.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0006.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0006.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0007.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0007.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0008.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0008.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0009.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0009.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0010.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0010.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0011.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0011.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnleftDown/TurnLEFTD0012.bmp",
+                       "target":  "assets/art/crawl/TurnleftDown/TurnLEFTD0012.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0000.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0000.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0001.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0001.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0002.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0002.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0003.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0003.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0004.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0004.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0005.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0005.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0006.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0006.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0007.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0007.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0008.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0008.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0009.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0009.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0010.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0010.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0011.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0011.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftRight/TurnLEFTR0012.bmp",
+                       "target":  "assets/art/crawl/TurnLeftRight/TurnLEFTR0012.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0000.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0000.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0001.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0001.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0002.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0002.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0003.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0003.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0004.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0004.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0005.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0005.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0006.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0006.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0007.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0007.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0008.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0008.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0009.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0009.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0010.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0010.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0011.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0011.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnLeftUp/TurnLEFTU0012.bmp",
+                       "target":  "assets/art/crawl/TurnLeftUp/TurnLEFTU0012.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0000.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0000.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0001.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0001.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0002.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0002.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0003.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0003.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0004.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0004.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0005.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0005.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0006.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0006.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0007.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0007.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0008.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0008.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0009.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0009.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0010.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0010.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0011.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0011.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnright/TurnRIGHT0012.bmp",
+                       "target":  "assets/art/crawl/turnright/TurnRIGHT0012.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0000.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0000.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0001.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0001.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0002.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0002.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0003.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0003.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0004.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0004.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0005.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0005.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0006.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0006.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0007.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0007.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0008.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0008.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0009.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0009.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0010.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0010.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0011.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0011.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/turnrightdown/TurnRIGHTD0012.bmp",
+                       "target":  "assets/art/crawl/turnrightdown/TurnRIGHTD0012.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0000.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0000.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0001.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0001.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0002.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0002.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0003.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0003.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0004.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0004.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0005.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0005.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0006.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0006.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0007.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0007.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0008.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0008.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0009.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0009.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0010.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0010.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0011.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0011.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightLEFT/TurnRIGHTL0012.bmp",
+                       "target":  "assets/art/crawl/TurnRightLEFT/TurnRIGHTL0012.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0000.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0000.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0001.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0001.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0002.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0002.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0003.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0003.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0004.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0004.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0005.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0005.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0006.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0006.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0007.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0007.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0008.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0008.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0009.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0009.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0010.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0010.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0011.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0011.png"
+                   },
+                   {
+                       "category":  "spidey-turn",
+                       "source":  "original assets/Art/WallCrawl/TurnRightUp/TurnRIGHTU0012.bmp",
+                       "target":  "assets/art/crawl/TurnRightUp/TurnRIGHTU0012.png"
+                   },
+                   {
+                       "category":  "shared",
+                       "source":  "original assets/Art/global/Pickups/pkup01.bmp",
+                       "target":  "assets/art/crawl/shared/pkup01.png"
+                   },
+                   {
+                       "category":  "shared",
+                       "source":  "original assets/Art/jewel/debris/brick1_01.bmp",
+                       "target":  "assets/art/crawl/shared/brick1_01.png"
+                   },
+                   {
+                       "category":  "shared",
+                       "source":  "original assets/Art/jewel/debris/shard2_01.bmp",
+                       "target":  "assets/art/crawl/shared/shard2_01.png"
+                   },
+                   {
+                       "category":  "shared",
+                       "source":  "original assets/Art/jewel/debris/brd1_01.bmp",
+                       "target":  "assets/art/crawl/shared/brd1_01.png"
+                   }
+               ],
+    "videos":  [
+                   {
+                       "category":  "level-transition",
+                       "source":  "original assets/Art/WallCrawl/Trans1.bik",
+                       "target":  "assets/video/crawl/Trans1.webm"
+                   },
+                   {
+                       "category":  "level-transition",
+                       "source":  "original assets/Art/WallCrawl/Trans2.bik",
+                       "target":  "assets/video/crawl/Trans2.webm"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/birds/Birdfly.bik",
+                       "target":  "assets/video/crawl/BuildingAFluff/birds/Birdfly.webm"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/madgirl/madgirl.bik",
+                       "target":  "assets/video/crawl/BuildingAFluff/madgirl/madgirl.webm"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/madgirl/realmadgirl.bik",
+                       "target":  "assets/video/crawl/BuildingAFluff/madgirl/realmadgirl.webm"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/OC/OCTOP1.bik",
+                       "target":  "assets/video/crawl/BuildingAFluff/OC/OCTOP1.webm"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/Shortcircuts/short.bik",
+                       "target":  "assets/video/crawl/BuildingAFluff/Shortcircuts/short.webm"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/Shortcircuts/short2.bik",
+                       "target":  "assets/video/crawl/BuildingAFluff/Shortcircuts/short2.webm"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/Shortcircuts/short3.bik",
+                       "target":  "assets/video/crawl/BuildingAFluff/Shortcircuts/short3.webm"
+                   },
+                   {
+                       "category":  "building-a-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingAFluff/windowwasher/washer.bik",
+                       "target":  "assets/video/crawl/BuildingAFluff/windowwasher/washer.webm"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/objectlayers/banshad.bik",
+                       "target":  "assets/video/crawl/BuildingBFluff/objectlayers/banshad.webm"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/OC/OCTOP2.bik",
+                       "target":  "assets/video/crawl/BuildingBFluff/OC/OCTOP2.webm"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/People/cat.bik",
+                       "target":  "assets/video/crawl/BuildingBFluff/People/cat.webm"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/People/GIRL.bik",
+                       "target":  "assets/video/crawl/BuildingBFluff/People/GIRL.webm"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/People/WASHERS.bik",
+                       "target":  "assets/video/crawl/BuildingBFluff/People/WASHERS.webm"
+                   },
+                   {
+                       "category":  "building-b-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingBFluff/People/wom.bik",
+                       "target":  "assets/video/crawl/BuildingBFluff/People/wom.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/OC/OCtop3.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/OC/OCtop3.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/windows/LL.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/windows/LL.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/windows/LR.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/windows/LR.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/windows/ML.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/windows/ML.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/windows/MLUL.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/windows/MLUL.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/windows/MR.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/windows/MR.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/windows/UL.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/windows/UL.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/windows/ULUL.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/windows/ULUL.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/windows/UR.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/windows/UR.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/windows/URLR.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/windows/URLR.webm"
+                   },
+                   {
+                       "category":  "building-c-fluff",
+                       "source":  "original assets/Art/WallCrawl/BuildingCfluff/windows/URR.bik",
+                       "target":  "assets/video/crawl/BuildingCfluff/windows/URR.webm"
+                   }
+               ]
+}

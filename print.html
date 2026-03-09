@@ -1,0 +1,262 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <link rel="icon" href="/icon.ico?v=2" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Print Center</title>
+  <style>
+    @font-face {
+      font-family: "Homoarakhn";
+      src: url("./assets/fonts/homoarakhn.regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --hud-number-font: "Small Fonts", "MS Sans Serif", Tahoma, "Arial Black", sans-serif;
+      --hud-text-font: Tahoma, Arial, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 12px;
+      box-sizing: border-box;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(128, 73, 31, 0.5), rgba(128, 73, 31, 0) 42%),
+        linear-gradient(180deg, #2c160b 0%, #150b06 100%);
+      font-family: "Homoarakhn", "Segoe UI", sans-serif;
+    }
+
+    .game-wrap {
+      width: min(calc(100vw - 24px), 980px);
+      aspect-ratio: 4 / 3;
+      border: 2px solid #594231;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+      cursor: none;
+      box-shadow:
+        0 0 0 1px rgba(255, 234, 216, 0.1),
+        0 18px 46px rgba(0, 0, 0, 0.55);
+    }
+
+    #root {
+      position: absolute;
+      inset: 0;
+      transform-origin: top left;
+      width: 640px;
+      height: 480px;
+    }
+
+    .layer {
+      position: absolute;
+      image-rendering: pixelated;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
+
+    .scene-bg {
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .poster {
+      object-fit: fill;
+    }
+
+    .video-layer {
+      width: 110px;
+      height: 90px;
+      object-fit: fill;
+      image-rendering: auto;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .hit,
+    .pause-hit,
+    .confirm-hit {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: transparent;
+      opacity: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    .hit:focus-visible,
+    .pause-hit:focus-visible,
+    .confirm-hit:focus-visible {
+      outline: 1px solid rgba(255, 255, 255, 0.8);
+      outline-offset: 1px;
+    }
+
+    .score-label-art {
+      left: 59px;
+      top: 90px;
+      z-index: 100;
+    }
+
+    .score-value {
+      position: absolute;
+      left: 109px;
+      top: 88px;
+      z-index: 101;
+      min-width: 140px;
+      color: #fbfdff;
+      font-family: var(--hud-number-font);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      line-height: 1;
+      text-shadow:
+        -2px 0 #000,
+        2px 0 #000,
+        0 -2px #000,
+        0 2px #000,
+        2px 2px 0 rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+      transform: scaleX(1.08);
+      transform-origin: left top;
+      -webkit-font-smoothing: none;
+      text-rendering: optimizeSpeed;
+      white-space: nowrap;
+    }
+
+    .center-text {
+      position: absolute;
+      left: 50%;
+      top: 28px;
+      z-index: 170;
+      transform: translateX(-50%);
+      padding: 7px 18px;
+      border: 1px solid rgba(255, 248, 225, 0.55);
+      border-radius: 999px;
+      background: rgba(25, 14, 8, 0.82);
+      color: #fff8ea;
+      font-family: "Homoarakhn", "Segoe UI", sans-serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+      text-align: center;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .cursor {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      transform: translate(-4px, -4px);
+      image-rendering: pixelated;
+      pointer-events: none;
+      z-index: 260;
+      display: none;
+    }
+
+    .pause-layer,
+    .confirm-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 210;
+    }
+
+    .pause-bg,
+    .pause-highlight,
+    .confirm-bg,
+    .confirm-highlight {
+      position: absolute;
+      image-rendering: pixelated;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-wrap" id="gameWrap">
+    <div id="root">
+      <img id="pageBackground" class="layer scene-bg" src="./legacy/art/print/background.bmp" alt="Print Center" />
+
+      <img id="pageOneCard" class="layer poster" src="./legacy/art/print/crawl.bmp" alt="" style="left: 220px; top: 126px; width: 420px; height: 354px;" />
+      <img id="pageOneCardHover" class="layer hidden" src="./assets/art/print/crawlh.png" alt="" style="left: 314px; top: 126px; width: 326px; height: 273px;" />
+      <img id="pageOneBackHover" class="layer hidden" src="./assets/art/print/backover.png" alt="" style="left: 0; top: 384px; width: 170px; height: 96px;" />
+      <img id="pageOneUpHover" class="layer hidden" src="./assets/art/print/upover.png" alt="" style="left: 229px; top: 173px; width: 85px; height: 82px;" />
+      <img id="pageOneDownHover" class="layer hidden" src="./assets/art/print/downover.png" alt="" style="left: 229px; top: 255px; width: 85px; height: 88px;" />
+
+      <img id="scoreLabelArt" class="layer score-label-art" src="./assets/art/ui/score_ru.png" alt="Счет" />
+      <div id="scoreValue" class="score-value">:0</div>
+
+      <img id="awardsCollage" class="layer poster hidden" src="./legacy/art/print/awardscreen/crawl3pics.bmp" alt="" style="left: 0; top: 111px; width: 640px; height: 369px;" />
+      <img id="awardsBackHover" class="layer hidden" src="./assets/art/print/awardscreen/backover.png" alt="" style="left: 0; top: 384px; width: 170px; height: 96px;" />
+      <img id="slot1Locked" class="layer hidden" src="./legacy/art/print/awardscreen/empty1.bmp" alt="" style="left: 0; top: 111px; width: 213px; height: 252px;" />
+      <img id="slot2Locked" class="layer hidden" src="./legacy/art/print/awardscreen/empty2.bmp" alt="" style="left: 219px; top: 111px; width: 201px; height: 202px;" />
+      <img id="slot3Locked" class="layer hidden" src="./legacy/art/print/awardscreen/empty3.bmp" alt="" style="left: 420px; top: 111px; width: 220px; height: 252px;" />
+      <img id="slot1Overlay" class="layer hidden" src="./assets/art/print/awardscreen/crawlover1.png" alt="" style="left: 0; top: 111px; width: 213px; height: 252px;" />
+      <img id="slot2Overlay" class="layer hidden" src="./assets/art/print/awardscreen/crawlover2.png" alt="" style="left: 219px; top: 111px; width: 201px; height: 202px;" />
+      <img id="slot3Overlay" class="layer hidden" src="./assets/art/print/awardscreen/crawlover3.png" alt="" style="left: 420px; top: 111px; width: 220px; height: 252px;" />
+      <img id="printHover" class="layer hidden" src="./assets/art/print/awardscreen/printover.png" alt="" style="left: 246px; top: 313px; width: 155px; height: 83px;" />
+
+      <video id="steamVideo" class="layer video-layer hidden" src="./assets/video/print/steam.webm" muted loop playsinline preload="auto" style="left: 530px; top: 0;"></video>
+
+      <div id="printMessage" class="center-text hidden" aria-live="polite">Печать...</div>
+
+      <button id="pageOneBackHit" class="hit" type="button" aria-label="Назад в меню" style="left: 0; top: 384px; width: 170px; height: 96px;"></button>
+      <button id="pageOneUpHit" class="hit" type="button" aria-label="Следующая мини-игра" style="left: 229px; top: 173px; width: 85px; height: 82px;"></button>
+      <button id="pageOneDownHit" class="hit" type="button" aria-label="Предыдущая мини-игра" style="left: 229px; top: 255px; width: 85px; height: 88px;"></button>
+      <button id="pageOneCardHit" class="hit" type="button" aria-label="Открыть награды" style="left: 118px; top: 153px; width: 498px; height: 214px;"></button>
+
+      <button id="awardsBackHit" class="hit hidden" type="button" aria-label="К выбору режима" style="left: 0; top: 384px; width: 170px; height: 96px;"></button>
+      <button id="slot1Hit" class="hit hidden" type="button" aria-label="Награда 1" style="left: 0; top: 111px; width: 213px; height: 252px;"></button>
+      <button id="slot2Hit" class="hit hidden" type="button" aria-label="Награда 2" style="left: 219px; top: 111px; width: 201px; height: 202px;"></button>
+      <button id="slot3Hit" class="hit hidden" type="button" aria-label="Награда 3" style="left: 420px; top: 111px; width: 220px; height: 252px;"></button>
+      <button id="printHit" class="hit hidden" type="button" aria-label="Распечатать" style="left: 246px; top: 313px; width: 155px; height: 83px;"></button>
+
+      <div id="pauseMenuOverlay" class="pause-layer hidden" aria-live="polite">
+        <img class="pause-bg" src="./assets/art/ui/menu.bmp" alt="Меню паузы" style="left: 188px; top: 70px;" />
+
+        <img id="pauseResumeOverlay" class="pause-highlight hidden" src="./assets/art/ui/resumeover.bmp" alt="" style="left: 213px; top: 111px;" />
+        <button id="pauseResumeHit" class="pause-hit" type="button" aria-label="Продолжить" style="left: 213px; top: 111px; width: 210px; height: 59px;"></button>
+
+        <img id="pauseRestartOverlay" class="pause-highlight hidden" src="./assets/art/ui/restartover.bmp" alt="" style="left: 200px; top: 173px;" />
+        <button id="pauseRestartHit" class="pause-hit" type="button" aria-label="Сбросить экран" style="left: 200px; top: 173px; width: 239px; height: 61px;"></button>
+
+        <img id="pauseHelpOverlay" class="pause-highlight hidden" src="./assets/art/ui/helpover.bmp" alt="" style="left: 232px; top: 237px;" />
+        <button id="pauseHelpHit" class="pause-hit" type="button" aria-label="К экрану выбора" style="left: 232px; top: 237px; width: 159px; height: 61px;"></button>
+
+        <img id="pauseMainMenuOverlay" class="pause-highlight hidden" src="./assets/art/ui/mainover.bmp" alt="" style="left: 195px; top: 301px;" />
+        <button id="pauseMainMenuHit" class="pause-hit" type="button" aria-label="Главное меню" style="left: 195px; top: 301px; width: 249px; height: 60px;"></button>
+      </div>
+
+      <div id="pauseConfirmOverlay" class="confirm-layer hidden" aria-live="polite">
+        <img class="confirm-bg" src="./assets/art/global/areyousure.bmp" alt="Вы уверены?" style="left: 181px; top: 170px;" />
+
+        <img id="pauseConfirmYesOverlay" class="confirm-highlight hidden" src="./assets/art/global/yesover.bmp" alt="" style="left: 240px; top: 244px;" />
+        <button id="pauseConfirmYesHit" class="confirm-hit" type="button" aria-label="Да" style="left: 240px; top: 244px; width: 83px; height: 35px;"></button>
+
+        <img id="pauseConfirmNoOverlay" class="confirm-highlight hidden" src="./assets/art/global/noover.bmp" alt="" style="left: 322px; top: 243px;" />
+        <button id="pauseConfirmNoHit" class="confirm-hit" type="button" aria-label="Нет" style="left: 322px; top: 243px; width: 58px; height: 35px;"></button>
+      </div>
+    </div>
+
+    <img id="cursor" class="cursor" src="./assets/art/global/cursor/arrow2_trim.png" alt="cursor" />
+  </div>
+
+  <script type="module" src="./src/print.js"></script>
+</body>
+</html>

@@ -1,0 +1,708 @@
+BACKGROUND ART\mugshot\crimecomputer\crimecomputer.BMP
+APPENDLOAD scripts\global.txt
+SET gCurrentGame = MugShot
+SET gsGameFileName = scripts\MugShot.txt
+SET GAME_fCurrentHigh = gMugShotHigh
+
+IF gLevelToLoad > 1 SET GAME_fPoints = gCurrentScore
+IF gGameRestarted = 1 SET GAME_fPoints = gStoredScore
+
+VAR FLOAT bEyesCorrect 
+VAR FLOAT bNoseCorrect
+VAR FLOAT bMouthCorrect
+VAR FLOAT bHairCorrect
+
+VAR FLOAT fBGExclude1
+VAR FLOAT fBGExclude2
+VAR FLOAT fCurCrook
+VAR FLOAT bBinkDelay
+
+VAR FLOAT fCrook1
+VAR FLOAT fCrook2
+VAR FLOAT fCrook3
+
+VAR FLOAT sndMatch
+VAR FLOAT sndMatchLoop
+VAR FLOAT sndMatchPart
+VAR FLOAT sndCaught
+VAR FLOAT sndButton
+VAR FLOAT sndPeter
+VAR FLOAT sndMSUI
+
+VAR FLOAT fPointsLost
+VAR FLOAT fMatchBtnPts
+VAR FLOAT fMovieBtnPts
+SET fMatchBtnPts = 100
+SET fMovieBtnPts = 50
+
+VAR FLOAT fPointsAccum
+
+VAR FLOAT fMatchFound
+VAR FLOAT fPartMatchFound
+VAR FLOAT fNumNewParts
+VAR FLOAT fPrevPartMatch
+
+VAR FLOAT fMaxFrame
+VAR FLOAT fBadGuy
+VAR STRING sCurBink
+SET fMaxFrame = 6
+
+VAR FLOAT fBlink1
+VAR FLOAT fBlink2
+VAR FLOAT fMatchtime
+VAR FLOAT fplaytime 
+VAR FLOAT fNewPart
+VAR FLOAT bShowPoster
+
+VAR FLOAT bForcedHideText
+VAR FLOAT bWinMugShot
+
+SET fMatchtime = 0.7
+SET fplaytime = 0.5
+
+SET bBinkDelay = 0
+SET fBGExclude1 = 5
+SET fBGExclude2 = 5
+SET fCurCrook = 1
+
+STORE game CLICK    IF bWinMugShot = 1 RETURN
+STORE game CLICK    IF bShowPoster = 1 TIMER game 0.5 tWait EXECUTE game HidePosterPlayBink
+STORE game CLICK    IF bShowPoster = 1 RETURN
+STORE game CLICK    IF fCurCrook != 4 IF gbBinkPlaying = 1 EXECUTE game BINKEND
+
+***********
+STORE game createsprite SPRITENAME PARAM1
+STORE game createsprite ADDFRAME PARAM1 PARAM2 PARAM3
+STORE game createsprite SETPOSITION PARAM1 PARAM4 PARAM5 0
+STORE game createsprite SHOW PARAM1
+STORE game createsprite SPRITEFPS PARAM1 8
+STORE game createsprite PLAYANIM PARAM1 PARAM3
+
+***********
+STORE game createallsprites SPRITENAME PARAM1
+STORE game createallsprites LOADFRAMES PARAM1 PARAM2 PARAM3
+STORE game createallsprites SETPOSITION PARAM1 PARAM4 PARAM5 0
+STORE game createallsprites SHOW PARAM1
+STORE game createallsprites SPRITEFPS PARAM1 3
+STORE game createallsprites PLAYANIM PARAM1 PARAM3
+
+********************
+SPRITENAME matchlightbink
+ADDBINK matchlightbink art\mugshot\Binks\matchlights.bik blink
+SETPOSITION matchlightbink 553 364 0
+SHOW matchlightbink
+CANLOOP matchlightbink blink
+CLICKABLE matchlightbink FALSE
+
+********************
+SPRITENAME lightbink
+ADDBINK lightbink art\mugshot\Binks\lights.bik blink
+SETPOSITION lightbink 553 364 0
+SHOW lightbink
+CANLOOP lightbink blink
+CLICKABLE lightbink FALSE
+
+********************
+SPRITENAME rightlightbink
+ADDBINK rightlightbink art\mugshot\Binks\Complight.bik blink
+SETPOSITION rightlightbink 544 171 0
+SHOW rightlightbink
+CANLOOP rightlightbink blink
+PLAYBINK rightlightbink blink
+CLICKABLE rightlightbink FALSE
+
+STORE lightbink BINKEND HIDE lightbink
+STORE lightbink BINKEND SHOW blinkylight
+STORE lightbink BINKEND PLAYBINK blinkylight blink
+
+**** EXECUTE game CreateSprite backface art\mugshot\crimecomputer\heads\.bmp Up 133 28
+
+EXECUTE game CreateSprite eyeup art\mugshot\crimecomputer\buttons\eyetop.bmp Up 227 270
+ADDFRAME eyeup art\mugshot\crimecomputer\buttons\eyetop_h.bmp UpH
+EXECUTE game CreateSprite eyedown art\mugshot\crimecomputer\buttons\eyebot.bmp Up 224 305
+ADDFRAME eyedown art\mugshot\crimecomputer\buttons\eyebot_h.bmp UpH
+EXECUTE game CreateSprite hairtop art\mugshot\crimecomputer\buttons\hairtop.bmp Up 214 356
+ADDFRAME hairtop art\mugshot\crimecomputer\buttons\hairtop_h.bmp UpH
+EXECUTE game CreateSprite hairbot art\mugshot\crimecomputer\buttons\hairbot.bmp Up 199 401
+ADDFRAME hairbot art\mugshot\crimecomputer\buttons\hairbot_h.bmp UpH
+EXECUTE game CreateSprite nosetop art\mugshot\crimecomputer\buttons\nosetop.bmp Up 381 265
+ADDFRAME nosetop art\mugshot\crimecomputer\buttons\nosetop_h.bmp UpH
+EXECUTE game CreateSprite nosebot art\mugshot\crimecomputer\buttons\nosebot.bmp Up 384 309
+ADDFRAME nosebot art\mugshot\crimecomputer\buttons\nosebot_h.bmp UpH
+EXECUTE game CreateSprite mouthtop art\mugshot\crimecomputer\buttons\mouthtop.bmp Up 388 355
+ADDFRAME mouthtop art\mugshot\crimecomputer\buttons\mouthtop_h.bmp UpH
+EXECUTE game CreateSprite mouthbot art\mugshot\crimecomputer\buttons\mouthbot.bmp Up 391 404
+ADDFRAME mouthbot art\mugshot\crimecomputer\buttons\mouthbot_h.bmp UpH
+EXECUTE game CreateSprite playbutton art\mugshot\crimecomputer\buttons\playbutton.bmp Up 288 278
+ADDFRAME playbutton art\mugshot\crimecomputer\buttons\playbutton_h.bmp UpH
+EXECUTE game CreateSprite matchbutton art\mugshot\crimecomputer\buttons\matchbutton.bmp Up 282 361
+ADDFRAME matchbutton art\mugshot\crimecomputer\buttons\matchbutton_h.bmp UpH
+
+EXECUTE game Createallsprites faces art\mugshot\crimecomputer\heads\face faceanim 330 30
+CANLOOP faces faceanim TRUE
+SPRITEFPS faces 11
+HIDE faces
+
+EXECUTE game Createallsprites hair art\mugshot\crimecomputer\headparts\hair anim 140 40
+EXECUTE game Createallsprites eyes art\mugshot\crimecomputer\headparts\eyes anim 167 93
+EXECUTE game Createallsprites mouth art\mugshot\crimecomputer\headparts\mouth anim 140 140
+EXECUTE game Createallsprites nose art\mugshot\crimecomputer\headparts\nose anim 193 109
+*ALPHACHANNEL mouth 99
+ALPHACHANNEL nose 99
+ALPHACHANNEL eyes 99
+*ALPHACHANNEL hair 99
+
+EXECUTE game Createallsprites pmouth art\mugshot\crimecomputer\panels\pmouth anim 439 362
+EXECUTE game Createallsprites peyes art\mugshot\crimecomputer\panels\peyes anim 130 278
+EXECUTE game Createallsprites pnose art\mugshot\crimecomputer\panels\pnose anim 429 277
+EXECUTE game Createallsprites phair art\mugshot\crimecomputer\panels\phair anim 117 365
+
+EXECUTE game CreateSprite mouthCheck art\mugshot\crimecomputer\panels\checkmouth.bmp Check 459 368
+EXECUTE game CreateSprite eyeCheck art\mugshot\crimecomputer\panels\checkeyes.bmp Check 150 282
+EXECUTE game CreateSprite noseCheck art\mugshot\crimecomputer\panels\checkNose.bmp Check 446 283
+EXECUTE game CreateSprite hairCheck art\mugshot\crimecomputer\panels\checkHair.bmp Check 138 368
+
+ALPHACHANNEL mouthCheck 99
+ALPHACHANNEL eyeCheck 99
+ALPHACHANNEL noseCheck 99
+ALPHACHANNEL hairCheck 99
+
+SETFRAME hair anim 2
+SETFRAME eyes anim 1
+SETFRAME nose anim 3
+SETFRAME mouth anim 0
+
+HIDE hair
+HIDE eyes
+HIDE nose
+HIDE mouth
+HIDE peyes
+HIDE phair
+HIDE pmouth
+HIDE pnose
+
+HIDE playbutton
+HIDE matchbutton
+HIDE eyeup
+HIDE eyedown
+HIDE hairtop
+HIDE hairbot
+HIDE nosetop
+HIDE nosebot
+HIDE mouthtop
+HIDE mouthbot
+
+HIDE eyeCheck 
+HIDE haircheck
+HIDE mouthcheck
+HIDE nosecheck
+
+CLICKWHENHIDDEN playbutton TRUE
+CLICKWHENHIDDEN matchbutton TRUE
+CLICKWHENHIDDEN eyeup TRUE
+CLICKWHENHIDDEN eyedown TRUE
+CLICKWHENHIDDEN hairtop TRUE
+CLICKWHENHIDDEN hairbot TRUE
+CLICKWHENHIDDEN nosetop TRUE
+CLICKWHENHIDDEN nosebot TRUE
+CLICKWHENHIDDEN mouthtop TRUE
+CLICKWHENHIDDEN mouthbot TRUE
+
+VAR FLOAT fCurrentFrame
+STORE game clickbuttonup SHOW PARAM1
+STORE game clickbuttonup SHOW PARAM2
+STORE game clickbuttonup SOUND sounds\mugshot\arrowbtn.wav
+STORE game clickbuttonup GETFRAME PARAM1 anim fCurrentFrame
+STORE game clickbuttonup SET fCurrentFrame += 1
+STORE game clickbuttonup IF fCurrentFrame > fMaxFrame SET fCurrentFrame = 0
+STORE game clickbuttonup SETFRAME PARAM1 anim fCurrentFrame
+STORE game clickbuttonup SETFRAME PARAM2 anim fCurrentFrame
+STORE game clickbuttonup SHOW PARAM3
+STORE game clickbuttonup TIMER game 0.2 clickmetimer HIDE PARAM3
+
+STORE game clickbuttondown SHOW PARAM1
+STORE game clickbuttondown SHOW PARAM2
+STORE game clickbuttondown SOUND sounds\mugshot\arrowbtn.wav
+STORE game clickbuttondown GETFRAME PARAM1 anim fCurrentFrame
+STORE game clickbuttondown SET fCurrentFrame -= 1
+STORE game clickbuttondown IF fCurrentFrame < 0 SET fCurrentFrame = fMaxFrame
+STORE game clickbuttondown SETFRAME PARAM1 anim fCurrentFrame
+STORE game clickbuttondown SETFRAME PARAM2 anim fCurrentFrame
+STORE game clickbuttondown SHOW PARAM3
+STORE game clickbuttondown TIMER game 0.2 clickmetimer HIDE PARAM3
+
+STORE eyeup ROLLOVER PLAYSOUND sndMSUI sounds\moclick001.wav FALSE
+STORE eyeup ROLLOVER SHOW eyeup
+STORE eyeup ROLLOVER SETFRAME eyeup UpH 0
+STORE eyedown ROLLOVER PLAYSOUND sndMSUI sounds\moclick001.wav FALSE
+STORE eyedown ROLLOVER SHOW eyedown
+STORE eyedown ROLLOVER SETFRAME eyedown UpH 0
+STORE hairtop ROLLOVER PLAYSOUND sndMSUI sounds\moclick001.wav FALSE
+STORE hairtop ROLLOVER SHOW hairtop 
+STORE hairtop ROLLOVER SETFRAME hairtop UpH 0
+STORE hairbot ROLLOVER PLAYSOUND sndMSUI sounds\moclick001.wav FALSE
+STORE hairbot ROLLOVER SHOW hairbot 
+STORE hairbot ROLLOVER SETFRAME hairbot UpH 0
+STORE nosetop ROLLOVER PLAYSOUND sndMSUI sounds\moclick001.wav FALSE
+STORE nosetop ROLLOVER SHOW nosetop 
+STORE nosetop ROLLOVER SETFRAME nosetop UpH 0
+STORE nosebot ROLLOVER PLAYSOUND sndMSUI sounds\moclick001.wav FALSE
+STORE nosebot ROLLOVER SHOW nosebot
+STORE nosebot ROLLOVER SETFRAME nosebot UpH 0
+STORE mouthtop ROLLOVER PLAYSOUND sndMSUI sounds\moclick001.wav FALSE
+STORE mouthtop ROLLOVER SHOW mouthtop
+STORE mouthtop ROLLOVER SETFRAME mouthtop UpH 0
+STORE mouthbot ROLLOVER PLAYSOUND sndMSUI sounds\moclick001.wav FALSE
+STORE mouthbot ROLLOVER SHOW mouthbot 
+STORE mouthbot ROLLOVER SETFRAME mouthbot UpH 0
+
+STORE eyeup UNROLLOVER HIDE eyeup
+STORE eyeup UNROLLOVER SETFRAME eyeup Up 0
+STORE eyedown UNROLLOVER HIDE eyedown
+STORE eyedown UNROLLOVER SETFRAME eyedown Up 0
+STORE hairtop UNROLLOVER HIDE hairtop
+STORE hairtop UNROLLOVER SETFRAME hairtop Up 0
+STORE hairbot UNROLLOVER HIDE hairbot
+STORE hairbot UNROLLOVER SETFRAME hairbot Up 0
+STORE nosetop UNROLLOVER HIDE nosetop
+STORE nosetop UNROLLOVER SETFRAME nosetop Up 0
+STORE nosebot UNROLLOVER HIDE nosebot
+STORE nosebot UNROLLOVER SETFRAME nosebot Up 0
+STORE mouthtop UNROLLOVER HIDE mouthtop
+STORE mouthtop UNROLLOVER SETFRAME mouthtop Up 0
+STORE mouthbot UNROLLOVER HIDE mouthbot
+STORE mouthbot UNROLLOVER SETFRAME mouthbot Up 0
+
+STORE eyeup CLICK IF bEyesCorrect = 0 EXECUTE game clickbuttonup eyes peyes eyeup
+STORE eyedown CLICK IF bEyesCorrect = 0 EXECUTE game clickbuttondown eyes peyes eyedown
+STORE hairtop CLICK IF bHairCorrect = 0 EXECUTE game clickbuttonup hair phair hairtop
+STORE hairbot CLICK IF bHairCorrect = 0 EXECUTE game clickbuttondown hair phair hairbot
+STORE nosetop CLICK IF bNoseCorrect = 0 EXECUTE game clickbuttonup nose pnose nosetop
+STORE nosebot CLICK IF bNoseCorrect = 0 EXECUTE game clickbuttondown nose pnose nosebot
+STORE mouthtop CLICK IF bMouthCorrect = 0 EXECUTE game clickbuttonup mouth pmouth mouthtop
+STORE mouthbot CLICK IF bMouthCorrect = 0 EXECUTE game clickbuttondown mouth pmouth mouthbot
+
+STORE eyeup activatebuttons IF PARAM1 ISSTRING TRUE THEN
+STORE eyeup activatebuttons		CLICKABLE playbutton TRUE
+STORE eyeup activatebuttons		CLICKABLE matchbutton TRUE
+STORE eyeup activatebuttons		CLICKABLE eyeup TRUE
+STORE eyeup activatebuttons		CLICKABLE eyedown TRUE
+STORE eyeup activatebuttons		CLICKABLE hairtop TRUE
+STORE eyeup activatebuttons		CLICKABLE hairbot TRUE
+STORE eyeup activatebuttons		CLICKABLE nosetop TRUE
+STORE eyeup activatebuttons		CLICKABLE nosebot TRUE
+STORE eyeup activatebuttons		CLICKABLE mouthtop TRUE
+STORE eyeup activatebuttons		CLICKABLE mouthbot TRUE
+STORE eyeup activatebuttons ELSE
+STORE eyeup activatebuttons		CLICKABLE playbutton FALSE
+STORE eyeup activatebuttons		CLICKABLE matchbutton FALSE
+STORE eyeup activatebuttons		CLICKABLE eyeup FALSE
+STORE eyeup activatebuttons		CLICKABLE eyedown FALSE
+STORE eyeup activatebuttons		CLICKABLE hairtop FALSE
+STORE eyeup activatebuttons		CLICKABLE hairbot FALSE
+STORE eyeup activatebuttons		CLICKABLE nosetop FALSE
+STORE eyeup activatebuttons		CLICKABLE nosebot FALSE
+STORE eyeup activatebuttons		CLICKABLE mouthtop FALSE
+STORE eyeup activatebuttons		CLICKABLE mouthbot FALSE
+STORE eyeup activatebuttons	ENDIF
+
+STORE matchbutton ROLLOVER SHOW matchbutton
+STORE matchbutton ROLLOVER SETFRAME matchbutton UpH 0
+STORE matchbutton ROLLOVER PLAYSOUND sndMSUI sounds\mugshot\roundover.wav FALSE
+STORE matchbutton UNROLLOVER HIDE matchbutton
+STORE matchbutton UNROLLOVER SETFRAME matchbutton Up 0
+STORE matchbutton CLICK IF fNumLives <= 0 RETURN
+STORE matchbutton CLICK SHOW matchbutton
+STORE matchbutton CLICK SOUND sounds\mugshot\matchbtn.wav
+STORE matchbutton CLICK TIMER game 0.5 tBtn PLAYSOUND sndMatchLoop sounds\mugshot\matchingloop.wav FALSE
+STORE matchbutton CLICK SHOW faces
+STORE matchbutton CLICK PLAYANIM faces faceanim
+STORE matchbutton CLICK PLAYANIM matchbutton Up
+STORE matchbutton CLICK SET fMatchtime = 0.15
+STORE matchbutton CLICK EXECUTE matchlight blink1
+STORE matchbutton CLICK HIDE lightbink
+STORE matchbutton CLICK SHOW matchlightbink
+STORE matchbutton CLICK PLAYBINK matchlightbink blink
+*STORE matchbutton CLICK SET fPointsLost -= fMatchBtnPts
+STORE matchbutton CLICK SET fPrevPartMatch = fPartMatchFound
+STORE matchbutton CLICK TIMER matchbutton 4 matchtimer EXECUTE matchbutton donematching
+STORE matchbutton CLICK EXECUTE eyeup activatebuttons FALSE
+
+STORE matchbutton donematching SET bHairCorrect = 0
+STORE matchbutton donematching SET bEyesCorrect = 0
+STORE matchbutton donematching SET bNoseCorrect = 0
+STORE matchbutton donematching SET bMouthCorrect = 0
+STORE matchbutton donematching SET fNumNewParts = 0
+
+STORE matchbutton donematching EXECUTE eyeup activatebuttons TRUE
+STORE matchbutton donematching SET fMatchFound = 1
+STORE matchbutton donematching SET fPartMatchFound = 0
+STORE matchbutton donematching SET fNewPart = 0
+STORE matchbutton donematching HIDE matchbutton
+
+STORE matchbutton donematching IF hair^hidden = 1 SET fMatchFound = 0
+STORE matchbutton donematching GETFRAME hair anim fCurrentFrame
+STORE matchbutton donematching IF fCurrentFrame != fBadGuy SET fMatchFound = 0
+STORE matchbutton donematching IF fCurrentFrame != fBadGuy SET bHairCorrect = 0
+STORE matchbutton donematching IF fCurrentFrame = fBadGuy SET bHairCorrect = 1
+
+STORE matchbutton donematching IF bHairCorrect = 0 HIDE hairCheck
+STORE matchbutton donematching IF bHairCorrect = 1 SHOW hairCheck
+STORE matchbutton donematching IF bHairCorrect = 1 SET fPartMatchFound += 1
+
+STORE matchbutton donematching IF eyes^hidden = 1 SET fMatchFound = 0
+STORE matchbutton donematching GETFRAME eyes anim fCurrentFrame
+STORE matchbutton donematching IF fCurrentFrame != fBadGuy SET fMatchFound = 0
+STORE matchbutton donematching IF fCurrentFrame != fBadGuy SET bEyesCorrect = 0
+STORE matchbutton donematching IF fCurrentFrame = fBadGuy SET bEyesCorrect = 1
+
+STORE matchbutton donematching IF bEyesCorrect = 0 HIDE eyeCheck
+STORE matchbutton donematching IF bEyesCorrect = 1 SHOW eyeCheck
+STORE matchbutton donematching IF bEyesCorrect = 1 SET fPartMatchFound += 1
+
+STORE matchbutton donematching IF nose^hidden = 1 SET fMatchFound = 0
+STORE matchbutton donematching GETFRAME nose anim fCurrentFrame
+STORE matchbutton donematching IF fCurrentFrame != fBadGuy SET fMatchFound = 0
+STORE matchbutton donematching IF fCurrentFrame != fBadGuy SET bNoseCorrect = 0
+STORE matchbutton donematching IF fCurrentFrame = fBadGuy SET bNoseCorrect = 1
+
+STORE matchbutton donematching IF bNoseCorrect = 0 HIDE noseCheck
+STORE matchbutton donematching IF bNoseCorrect = 1 SHOW noseCheck
+STORE matchbutton donematching IF bNoseCorrect = 1 SET fPartMatchFound += 1
+
+STORE matchbutton donematching IF mouth^hidden = 1 SET fMatchFound = 0
+STORE matchbutton donematching GETFRAME mouth anim fCurrentFrame
+STORE matchbutton donematching IF fCurrentFrame != fBadGuy SET fMatchFound = 0
+STORE matchbutton donematching IF fCurrentFrame != fBadGuy SET bMouthCorrect = 0
+STORE matchbutton donematching IF fCurrentFrame = fBadGuy SET bMouthCorrect = 1
+
+STORE matchbutton donematching IF bMouthCorrect = 0 HIDE mouthCheck
+STORE matchbutton donematching IF bMouthCorrect = 1 SHOW mouthCheck
+STORE matchbutton donematching IF bMouthCorrect = 1 SET fPartMatchFound += 1
+
+STORE matchbutton donematching SET fPointsAccum = 0
+STORE matchbutton donematching IF gGameRestarted = 1 SET GAME_fPoints = gStoredScore
+STORE matchbutton donematching IF gGameRestarted = 0 IF fCurCrook = 1 SET GAME_fPoints = 0
+STORE matchbutton donematching IF gGameRestarted = 0 IF fCurCrook = 2 SET GAME_fPoints = gfPointsToADD
+STORE matchbutton donematching IF gGameRestarted = 0 IF fCurCrook = 2 SET GAME_fPoints *= 4
+STORE matchbutton donematching IF gGameRestarted = 0 IF fCurCrook = 3 SET GAME_fPoints = gfPointsToADD
+STORE matchbutton donematching IF gGameRestarted = 0 IF fCurCrook = 3 SET GAME_fPoints *= 8
+STORE matchbutton donematching SET fPointsAccum = gfPointsToADD
+STORE matchbutton donematching SET fPointsAccum *= fPartMatchFound
+STORE matchbutton donematching SET GAME_fPoints += fPointsAccum
+STORE matchbutton donematching SET GAME_fPoints -= fPointsLost
+STORE matchbutton donematching IF GAME_fPoints < 0 SET GAME_fPoints = 0
+STORE matchbutton donematching IF fPrevPartMatch < fPartMatchFound SET fNewPart = 1
+
+STORE matchbutton donematching SET fNumNewParts = fPartMatchFound
+STORE matchbutton donematching SET fNumNewParts -= fPrevPartMatch
+STORE matchbutton donematching SET fNumNewParts *= gfPointsToADD
+STORE matchbutton donematching SET GAME_fPoints -= fNumNewParts
+STORE matchbutton donematching IF fPrevPartMatch < fPartMatchFound BONUSPOINTS matchbutton 0 -200 fNumNewParts
+
+STORE matchbutton donematching EXECUTE game savescores
+
+STORE matchbutton donematching HIDE matchlightbink
+STORE matchbutton donematching SHOW lightbink
+STORE matchbutton donematching PLAYBINK lightbink blink
+
+STORE matchbutton donematching IF fMatchFound = 0 THEN
+STORE matchbutton donematching      IF fNewPart = 0 EXECUTE game AddMiss 1
+STORE matchbutton donematching 		IF fNewPart = 0 CENTERTEXT 100 2.9 yt yfqlty
+STORE matchbutton donematching 		IF fNewPart = 0 PLAYSOUND sndMatch sounds\mugshot\mismatch.wav FALSE
+STORE matchbutton donematching      IF fNewPart = 1 PLAYSOUND sndMatchPart sounds\mugshot\partmatch.wav FALSE
+STORE matchbutton donematching 		HIDE faces
+STORE matchbutton donematching 		SET fMatchtime = 0.7
+STORE matchbutton donematching 		RETURN
+STORE matchbutton donematching ENDIF
+
+STORE matchbutton donematching PLAYSOUND sndMatch sounds\mugshot\match.wav FALSE
+STORE matchbutton donematching TIMER game 1.0 tPeterTalk PLAYSOUND sndPeter sounds\mugshot\mspp004.wav FALSE
+STORE matchbutton donematching CENTERTEXT 100 2.9 cjdgfltybt
+STORE matchbutton donematching SETFRAME faces faceanim fCurrentFrame
+STORE matchbutton donematching SET fCurCrook += 1
+STORE matchbutton donematching SET gfCurLevel += 1
+STORE matchbutton donematching SET gLevelToLoad += 1
+STORE matchbutton donematching SET gStoredScore = GAME_fPoints
+
+STORE matchbutton donematching	EXECUTE eyeup activatebuttons FALSE
+STORE matchbutton donematching 	HIDE lightbink
+
+STORE matchbutton donematching  TIMER poster1 3.2 tHideT1 EXECUTE game HideScoreAndBook 1
+
+STORE matchbutton donematching  IF fBadGuy = 1 TIMER poster1 3.2 postertimer1 SHOW poster1
+STORE matchbutton donematching  IF fBadGuy = 2 TIMER poster1 3.2 postertimer1 SHOW poster2
+STORE matchbutton donematching  IF fBadGuy = 0 TIMER poster1 3.2 postertimer1 SHOW poster3
+STORE matchbutton donematching  SET fPartMatchFound = 0
+
+STORE matchbutton donematching 	TIMER game 3.2 postertimer2 PLAYSOUND sndCaught sounds\mugshot\caught.wav FALSE
+STORE matchbutton donematching	TIMER game 7.0 postertimer4 EXECUTE game HidePosterPlayBink
+
+STORE matchbutton donematching  SET fMatchtime = 0.7
+
+STORE game HidePosterPlayBink   IF bShowPoster = 1 EXECUTE game NextBink
+STORE game HidePosterPlayBink   SET bShowPoster = 0
+
+*STORE game HideScoreAndBook     CANDRAWTEXT FALSE
+STORE game HideScoreAndBook     HIDEVAR gsHighScore
+STORE game HideScoreAndBook     HIDEVAR GAME_fCurrentHigh
+STORE game HideScoreAndBook     HIDEVAR GAME_fPoints
+STORE game HideScoreAndBook     SET bForcedHideText = 1
+STORE game HideScoreAndBook     HIDE btnBook
+STORE game HideScoreAndBook     SET bDisableBook = 1
+STORE game HideScoreAndBook     SET gbBinkPlaying = 1
+STORE game HideScoreAndBook     EXECUTE game gShowHUD FALSE ALL
+STORE game HideScoreAndBook     EXECUTE sCurMissMeter Reset
+STORE game HideScoreAndBook     SET bShowPoster = PARAM1
+
+STORE game nextbink IF gbBinkPlaying = 0 RETURN
+STORE game nextbink IF fCurCrook = 1 SET fBadGuy = fCrook1
+STORE game nextbink IF fCurCrook = 2 SET fBadGuy = fCrook2
+STORE game nextbink IF fCurCrook = 3 SET fBadGuy = fCrook3
+STORE game nextbink IF fBadGuy = 0 SET sCurBink = Ware
+STORE game nextbink IF fBadGuy = 1 SET sCurBink = Bank
+STORE game nextbink IF fBadGuy = 2 SET sCurBink = Alley
+STORE game nextbink IF fCurCrook = 4 SET sCurBink = Jail
+STORE game nextbink IF fCurCrook = 4 SET bWinMugShot = 1
+STORE game nextbink IF fCurCrook = 4 HIDE poster1
+STORE game nextbink IF fCurCrook = 4 HIDE poster2
+STORE game nextbink IF fCurCrook = 4 HIDE poster3
+STORE game nextbink IF fCurCrook = 4 HIDE faces
+
+STORE game nextbink PLAYANIM Cursor PIXEL
+STORE game nextbink SHOW BinkPlayer
+STORE game nextbink IF fCurCrook = 4 PLAYBINK BinkPlayer sCurBink 0 0 FALSE
+STORE game nextbink IF fCurCrook != 4 PLAYBINK BinkPlayer sCurBink
+STORE game nextbink EXECUTE game SetLife 3 5
+STORE game nextbink EXECUTE game DisplayRoundInfo 0 3.0
+STORE game nextbink MUSIC sounds\mugshot\silence.wav
+
+********************
+STORE Playbutton ROLLOVER SHOW Playbutton
+STORE Playbutton ROLLOVER SETFRAME Playbutton UpH 0
+STORE Playbutton ROLLOVER PLAYSOUND sndMSUI sounds\mugshot\roundover.wav FALSE
+STORE Playbutton UNROLLOVER HIDE Playbutton
+STORE Playbutton UNROLLOVER SETFRAME Playbutton Up 0
+STORE Playbutton CLICK IF fNumLives <= 0 RETURN
+STORE Playbutton CLICK SOUND sounds\mugshot\binkbtn.wav
+STORE Playbutton CLICK SHOW playbutton
+STORE Playbutton CLICK PLAYANIM playbutton Up
+*STORE Playbutton CLICK SET fPointsLost += fMatchBtnPts
+STORE Playbutton CLICK EXECUTE playlight blink1
+STORE Playbutton CLICK SET fplaytime = 0.1
+STORE playbutton CLICK TIMER BinkPlayer 2.0 banktimer EXECUTE playbutton binkdelay 
+STORE Playbutton CLICK EXECUTE eyeup activatebuttons FALSE
+
+STORE Playbutton binkdelay HIDE playbutton 
+STORE playbutton binkdelay SHOW BinkPlayer
+STORE playbutton binkdelay music sounds\mugshot\silence.wav
+STORE playbutton binkdelay SET bBinkDelay = 1
+STORE playbutton binkdelay IF fBadGuy = 1 CreateBink art\mugshot\binks\shortbank.bik movieplay
+STORE playbutton binkdelay IF fBadGuy = 2 CreateBink art\mugshot\binks\shortally.bik movieplay
+STORE playbutton binkdelay IF fBadGuy = 0 CreateBink art\mugshot\binks\shortware.bik movieplay
+
+********************
+
+EXECUTE game CreateSprite matchlight art\mugshot\crimecomputer\buttons\matchlight.bmp Up 19 251
+EXECUTE game CreateSprite playlight art\mugshot\crimecomputer\buttons\playlight.bmp Up 15 219
+
+STORE playlight blink1 IF fBlink1 = 0 THEN
+STORE playlight blink1 		SHOW playlight
+STORE playlight blink1 		SET fBlink1 = 1
+STORE playlight blink1 ELSE
+STORE playlight blink1 		HIDE playlight
+STORE playlight blink1 		SET fBlink1 = 0
+STORE playlight blink1 ENDIF
+STORE playlight blink1 TIMER playlight fplaytime timerblink1 EXECUTE playlight blink1
+
+STORE matchlight blink1 IF fBlink2 = 0 THEN
+STORE matchlight blink1 	SHOW matchlight
+STORE matchlight blink1 	SET fBlink2 = 1
+STORE matchlight blink1 ELSE
+STORE matchlight blink1 	HIDE matchlight
+STORE matchlight blink1 	SET fBlink2 = 0
+STORE matchlight blink1 ENDIF
+STORE matchlight blink1 TIMER matchlight fMatchtime timerblink2 EXECUTE matchlight blink1
+
+********************
+SPRITENAME poster1
+ADDFRAME art\mugshot\crimecomputer\poster1.bmp post1
+SETPOSITION poster1 0 0 0
+HIDE poster1
+CLICKABLE poster1 FALSE
+
+STORE poster1 posterspot1 HIDE poster1
+STORE poster1 posterspot1 HIDE eyes
+STORE poster1 posterspot1 HIDE hair
+STORE poster1 posterspot1 HIDE nose
+STORE poster1 posterspot1 HIDE mouth
+STORE poster1 posterspot1 HIDE faces
+STORE poster1 posterspot1 HIDE peyes
+STORE poster1 posterspot1 HIDE phair
+STORE poster1 posterspot1 HIDE pmouth
+STORE poster1 posterspot1 HIDE pnose
+
+********************
+SPRITENAME poster2
+ADDFRAME art\mugshot\crimecomputer\poster2.bmp post2
+SETPOSITION poster2 0 0 0
+HIDE poster2
+CLICKABLE poster2 FALSE
+
+STORE poster2 posterspot2 HIDE poster2
+STORE poster2 posterspot2 HIDE eyes
+STORE poster2 posterspot2 HIDE hair
+STORE poster2 posterspot2 HIDE nose
+STORE poster2 posterspot2 HIDE mouth
+STORE poster2 posterspot2 HIDE faces
+STORE poster2 posterspot2 HIDE peyes
+STORE poster2 posterspot2 HIDE phair
+STORE poster2 posterspot2 HIDE pmouth
+STORE poster2 posterspot2 HIDE pnose
+
+********************
+SPRITENAME poster3
+ADDFRAME art\mugshot\crimecomputer\poster3.bmp post3
+SETPOSITION poster3 0 0 0
+HIDE poster3
+CLICKABLE poster3 FALSE
+
+STORE poster3 posterspot3 HIDE poster3
+STORE poster3 posterspot3 HIDE eyes
+STORE poster3 posterspot3 HIDE hair
+STORE poster3 posterspot3 HIDE nose
+STORE poster3 posterspot3 HIDE mouth
+STORE poster3 posterspot3 HIDE peyes
+STORE poster3 posterspot3 HIDE phair
+STORE poster3 posterspot3 HIDE pmouth
+STORE poster3 posterspot3 HIDE pnose
+STORE poster3 posterspot3 HIDE faces
+
+STORE game RandomizeItem SHOW PARAM1
+STORE game RandomizeItem SHOW PARAM2
+STORE game RandomizeItem RANDOMEXCLUDE fCurrentFrame 0 fMaxFrame
+STORE game RandomizeItem SETFRAME PARAM1 anim fCurrentFrame
+STORE game RandomizeItem SETFRAME PARAM2 anim fCurrentFrame
+
+STORE game RandomizeFace EXECUTE game RandomizeItem eyes peyes
+STORE game RandomizeFace EXECUTE game RandomizeItem hair phair
+STORE game RandomizeFace EXECUTE game RandomizeItem nose pnose
+STORE game RandomizeFace EXECUTE game RandomizeItem mouth pmouth
+STORE game RandomizeFace SET bHairCorrect = 0
+STORE game RandomizeFace SET bEyesCorrect = 0
+STORE game RandomizeFace SET bNoseCorrect = 0
+STORE game RandomizeFace SET bMouthCorrect = 0
+STORE game RandomizeFace HIDE mouthcheck
+STORE game RandomizeFace HIDE nosecheck
+STORE game RandomizeFace HIDE eyecheck
+STORE game RandomizeFace HIDE haircheck
+
+STORE game gHideMenu    IF gbBinkPlaying = 1 EXECUTE game HideScoreAndBook 0
+STORE game gHideMenu    IF gbBinkPlaying = 1 SET bDisableBook = 1
+
+SPRITENAME BinkPlayer
+ADDBINK BinkPlayer art\mugshot\Binks\bank.bik Bank
+ADDBINK BinkPlayer art\mugshot\Binks\ally.bik Alley
+ADDBINK BinkPlayer art\mugshot\Binks\Ware.bik Ware
+ADDBINK BinkPlayer art\mugshot\Binks\Jailbirds.bik Jail
+
+SETPOSITION BinkPlayer 0 0 10
+SPRITEFPS BinkPlayer 1
+HIDE BinkPlayer
+CLICKABLE BinkPlayer FALSE
+USESCREENCOORD BinkPlayer
+
+STORE game BINKEND  EXECUTE BinkPlayer BINKEND NONE
+
+STORE BinkPlayer BINKEND IF PARAM1 ISSTRING Jail EXECUTE game ENDGAME WIN
+STORE BinkPlayer BINKEND IF PARAM1 ISSTRING Jail RETURN
+STORE BinkPlayer BINKEND CANDRAWTEXT TRUE
+STORE BinkPlayer BINKEND EXECUTE eyeup activatebuttons TRUE
+STORE BinkPlayer BINKEND HIDE BinkPlayer
+STORE BinkPlayer BINKEND SET fplaytime = .68
+STORE BinkPlayer BINKEND HIDE poster1
+STORE BinkPlayer BINKEND HIDE poster2
+STORE BinkPlayer BINKEND HIDE poster3
+STORE BinkPlayer BINKEND HIDE faces
+STORE BinkPlayer BINKEND EXECUTE eyeup activatebuttons TRUE
+STORE BinkPlayer BINKEND IF bBinkDelay = 0 EXECUTE game RandomizeFace
+STORE BinkPlayer BINKEND SET bBinkDelay = 0
+STORE BinkPlayer BINKEND SET gbBinkPlaying = 0
+STORE BinkPlayer BINKEND SET bDisableBook = 0
+STORE BinkPlayer BINKEND SHOW btnBook
+STORE BinkPlayer BINKEND SHOW lightbink
+STORE BinkPlayer BINKEND PLAYBINK lightbink blink
+STORE BinkPlayer BINKEND EXECUTE game gShowHUD TRUE ALL
+STORE BinkPlayer BINKEND IF bForcedHideText = 1 CENTERVAR gsHighScore 10
+STORE BinkPlayer BINKEND IF bForcedHideText = 1 CENTERVAR GAME_fCurrentHigh 30
+STORE BinkPlayer BINKEND IF bForcedHideText = 1 DRAWVAR GAME_fPoints 500 30
+STORE BinkPlayer BINKEND IF bForcedHideText = 1 SET bForcedHideText = 0
+STORE BinkPlayer BINKEND MUSIC sounds\mugshot\policeambient.wav
+STORE BinkPlayer BINKEND PLAYANIM Cursor ARROW
+STORE BinkPlayer BINKEND SET sCurMissMeter = MissMeter3
+STORE BinkPlayer BINKEND EXECUTE sCurMissMeter Reset 0
+STORE BinkPlayer BINKEND IF fCurCrook = 1 PLAYSOUND sndPeter sounds\mugshot\mspp001.wav FALSE
+STORE BinkPlayer BINKEND IF fCurCrook = 2 PLAYSOUND sndPeter sounds\mugshot\mspp002.wav FALSE
+STORE BinkPlayer BINKEND IF fCurCrook = 3 PLAYSOUND sndPeter sounds\mugshot\mspp003.wav FALSE
+
+
+APPENDLOAD scripts\UI.txt
+
+************************************
+** GLOBAL VARIABLE INITIALIZATION
+************************************
+APPENDLOAD scripts\miss.txt
+ADDFRAME Life1 art\global\life\spideyhead.bmp Base
+ADDFRAME Life2 art\global\life\spideyhead.bmp Base
+ADDFRAME Life3 art\global\life\spideyhead.bmp Base
+
+************************************
+* GLOBAL VARIABLE EXECUTION
+************************************
+STORE game SetGlobals EXECUTE game SetLife 3 5
+STORE game SetGlobals SET sCurMissMeter = MissMeter3
+STORE game SetGlobals SET sWinAudio = sounds\mugshot\msppwin.wav
+STORE game SetGlobals SET sLoseAudio = sounds\mugshot\mspplose.wav
+STORE game SetGlobals SET gfPointsToADD = 1750
+STORE game SetGlobals SET gbReadyForUser = 0
+STORE game SetGlobals EXECUTE sCurMissMeter Reset 0
+STORE game SetGlobals IF gGameRestarted = 1 SET GAME_fPoints = gStoredScore
+
+
+STORE game StartGame IF bGameStarted = 0 THEN
+STORE game StartGame	SET bGameStarted = 1
+STORE game StartGame	EXECUTE game SetGlobals
+STORE game StartGame	SET gfCurLevel = gLevelToLoad
+*STORE game StartGame	RANDOMEXCLUDE fBadGuy 0 2
+*STORE game StartGame	SET fCrook1 = fBadGuy
+*STORE game StartGame	RANDOMEXCLUDE fCrook2 0 2 fCrook1
+*STORE game StartGame	RANDOMEXCLUDE fCrook3 0 2 fCrook1 fCrook2
+*STORE game StartGame	SET fBGExclude1 = fBadGuy
+STORE game StartGame	SET fCrook1 = 1
+STORE game StartGame	SET fCrook2 = 2
+STORE game StartGame	SET fCrook3 = 0
+STORE game StartGame	IF gLevelToLoad = 1 SET fBadGuy = fCrook1
+STORE game StartGame	IF gLevelToLoad = 2 SET fBadGuy = fCrook2
+STORE game StartGame	IF gLevelToLoad = 3 SET fBadGuy = fCrook3
+STORE game StartGame	IF gLevelToLoad = 1 SET fCurCrook = 1
+STORE game StartGame	IF gLevelToLoad = 2 SET fCurCrook = 2
+STORE game StartGame	IF gLevelToLoad = 3 SET fCurCrook = 3
+STORE game StartGame	IF fBadGuy = 1 SET sCurBink = Bank
+STORE game StartGame	IF fBadGuy = 2 SET sCurBink = Alley
+STORE game StartGame	IF fBadGuy = 0 SET sCurBink = Ware
+STORE game StartGame	EXECUTE eyeup activatebuttons FALSE
+STORE game StartGame	SHOW BinkPlayer
+STORE game StartGame	PLAYANIM Cursor PIXEL
+STORE game StartGame	PLAYBINK BinkPlayer sCurBink
+STORE game StartGame	EXECUTE game HideScoreAndBook 0
+STORE game StartGame	CANDRAWTEXT TRUE
+STORE game StartGame	SET fPointsAccum = 0
+STORE game StartGame	SET fPointsLost = 0
+STORE game StartGame	MUSIC sounds\mugshot\silence.wav
+STORE game StartGame	EXECUTE game DisplayRoundInfo 0 3.0
+STORE game StartGame	SET bWinMugShot = 0
+STORE game StartGame ENDIF
+
+IF gLevelToLoad = 1 SET gsIntroVO = sounds\mugshot\msppintro.wav
+IF gLevelToLoad = 1 EXECUTE game F1Key
+IF gLevelToLoad > 1 EXECUTE game StartGame

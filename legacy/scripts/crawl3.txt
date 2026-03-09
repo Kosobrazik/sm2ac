@@ -1,0 +1,268 @@
+BACKGROUND art\WallCrawl\bldC.bmp
+SET gCurrentGame = Crawl
+set gsGameFileName = scripts\crawl.txt
+set GAME_fCurrentHigh = gCrawlHigh
+
+EXECUTE game CreateBlocker ScreenLeft -30 0 50 2400
+STORE ScreenLeft TOUCH BLOCK Spidey ScreenLeft
+
+EXECUTE game CreateBlocker ScreenRight 640 0 50 2400
+STORE ScreenRight TOUCH BLOCK Spidey ScreenRight
+
+EXECUTE game CreateBlocker ScreenBottom 0 2393 639 6
+STORE ScreenBottom TOUCH BLOCK Spidey ScreenBottom
+
+EXECUTE game CreateBlocker WIN1B 1 2118 59 83
+STORE WIN1B TOUCH BLOCK Spidey WIN1B
+
+EXECUTE game CreateBlocker WIN2B 579 2117 60 86
+STORE WIN2B TOUCH BLOCK Spidey WIN2B
+
+EXECUTE game CreateBlocker CenterWinA 266 2074 104 241
+STORE CenterWinA TOUCH BLOCK Spidey CenterWinA
+
+EXECUTE game CreateBlocker CenterWinB 266 1555 102 384
+STORE CenterWinB TOUCH BLOCK Spidey CenterWinB
+
+EXECUTE game CreateBlocker CenterWinC 267 1071 102 354
+STORE CenterWinB TOUCH BLOCK Spidey CenterWinB
+
+EXECUTE game CreateBinkBlocker LL 138 2160 Art\WallCrawl\BuildingCfluff\Windows\LL.bik LL
+HOTSPOTAREA LL -6 -43 59 101
+STORE LL TOUCH BLOCK Spidey LL
+
+EXECUTE game CreateBlocker LL2 196 2158 64 65
+
+EXECUTE game CreateBinkBlocker LR 448 2131 Art\WallCrawl\BuildingCfluff\Windows\LR.bik LR
+HOTSPOTAREA LR -3 -16 59 87
+STORE LR TOUCH BLOCK Spidey LR
+
+EXECUTE game CreateBinkBlocker ML 138 1793 Art\WallCrawl\BuildingCfluff\Windows\ML.bik ML
+HOTSPOTAREA ML -4 -6 61 85
+STORE ML TOUCH BLOCK Spidey ML
+
+EXECUTE game CreateBinkBlocker MR 448 1796 Art\WallCrawl\BuildingCfluff\Windows\MR.bik MR
+HOTSPOTAREA MR -2 -9 59 85
+STORE MR TOUCH BLOCK Spidey MR
+
+EXECUTE game CreateBinkBlocker UL 139 1297 Art\WallCrawl\BuildingCfluff\Windows\UL.bik UL
+STORE UL TOUCH BLOCK Spidey UL
+
+EXECUTE game CreateBinkBlocker ULUL 9 1129 Art\WallCrawl\BuildingCfluff\Windows\ULUL.bik ULUL
+HOTSPOTAREA ULUL -3 -9 58 83
+STORE ULUL TOUCH BLOCK Spidey ULUL
+
+EXECUTE game CreateBinkBlocker MLUL 7 1618 Art\WallCrawl\BuildingCfluff\Windows\MLUL.bik MLUL
+STORE MLUL TOUCH BLOCK Spidey MLUL
+
+EXECUTE game CreateBinkBlocker UR 447 1129 Art\WallCrawl\BuildingCfluff\Windows\UR.bik UR
+HOTSPOTAREA UR -4 -9 60 101
+STORE UR TOUCH BLOCK Spidey UR
+
+EXECUTE game CreateBinkBlocker URLR 579 1309 Art\WallCrawl\BuildingCfluff\Windows\URLR.bik URLR
+HOTSPOTAREA URLR -3 -21 61 87
+STORE URLR TOUCH BLOCK Spidey URLR
+
+EXECUTE game CreateBlocker URr 577 1174 54 80
+HOTSPOTAREA URR -1 -54 58 83
+STORE URr TOUCH BLOCK Spidey URr
+
+EXECUTE game CreateBlocker WIN1A 444 1612 60 87
+STORE WIN1A TOUCH BLOCK Spidey WIN1A
+
+EXECUTE game CreateBlocker WIN2A 135 1613 60 86
+STORE WIN2A TOUCH BLOCK Spidey WIN2A
+
+EXECUTE game CreateBlocker WIN3A 444 1288 57 86
+STORE WIN3A TOUCH BLOCK Spidey WIN3A
+
+EXECUTE game CreateBlocker WIN4A 136 1118 59 84
+STORE WIN3A TOUCH BLOCK Spidey WIN3A
+
+EXECUTE game CreateBlocker Ledge1 0 1984 61 36
+STORE Ledge1 TOUCH BLOCK Spidey Ledge1
+
+EXECUTE game CreateBlocker Ledge2 134 1984 376 36
+STORE Ledge2 TOUCH BLOCK Spidey Ledge2
+
+EXECUTE game CreateBlocker Ledge3 571 1984 67 36
+STORE Ledge3 TOUCH BLOCK Spidey Ledge3
+
+EXECUTE game CreateBlocker LeftHole 0 341 70 53
+STORE LeftHole TOUCH BLOCK Spidey LeftHole
+
+EXECUTE game CreateBlocker WIN3B 3 1787 61 85
+STORE WIN3B TOUCH BLOCK Spidey WIN3B
+
+EXECUTE game CreateBlocker WIN4B 578 1787 61 85
+STORE WIN4B TOUCH BLOCK Spidey WIN4B
+
+EXECUTE game CreateBlocker WIN5B 578 1614 59 84
+STORE WIN5B TOUCH BLOCK Spidey WIN5B
+
+EXECUTE game CreateBlocker WIN6B 5 1291 59 83
+STORE WIN6B TOUCH BLOCK Spidey WIN6B
+
+EXECUTE game CreateBlocker Ledge4 0 981 66 35
+STORE Ledge4 TOUCH BLOCK Spidey Ledge4
+
+EXECUTE game CreateBlocker Ledge5 131 981 378 35
+STORE Ledge5 TOUCH BLOCK Spidey Ledge5
+
+EXECUTE game CreateBlocker Ledge6 576 981 63 35
+STORE Ledge6 TOUCH BLOCK Spidey Ledge6
+
+EXECUTE game CreateBlocker Divet 373 2074 107 99
+STORE Divet TOUCH BLOCK Spidey Divet
+
+EXECUTE game CreateBlocker HoleA 506 1735 70 75
+STORE HoleA TOUCH BLOCK Spidey HoleA
+
+EXECUTE game CreateBlocker HoleAU 505 1711 69 33
+STORE HoleAU TOUCH BLOCK Spidey HoleAU
+
+EXECUTE game CreateBlocker HoleB 49 1378 101 84
+STORE HoleB TOUCH BLOCK Spidey HoleB
+
+EXECUTE game CreateBlocker SteelA 70 673 121 121
+STORE SteelA TOUCH BLOCK Spidey SteelA
+
+EXECUTE game CreateBlocker SteelB 267 672 103 123
+STORE SteelB TOUCH BLOCK Spidey SteelB
+
+EXECUTE game CreateBlocker SteelC 446 482 119 309
+STORE SteelC TOUCH BLOCK Spidey SteelC
+
+EXECUTE game CreateBlocker SteelD 70 481 121 106
+STORE SteelD TOUCH BLOCK Spidey SteelD
+
+EXECUTE game CreateBlocker SteelE 267 484 103 103
+STORE SteelE TOUCH BLOCK Spidey SteelE
+
+EXECUTE game CreateBlocker SteelF 563 328 76 196
+STORE SteelF TOUCH BLOCK Spidey SteelF
+
+EXECUTE game CreateBlocker SteelG 71 329 122 73
+STORE SteelG TOUCH BLOCK Spidey SteelG
+
+EXECUTE game CreateBlocker SteelH 267 292 104 111
+STORE SteelH TOUCH BLOCK Spidey SteelH
+
+EXECUTE game CreateBlocker SteelI 443 288 113 110
+STORE SteelI TOUCH BLOCK Spidey SteelI
+
+EXECUTE game CreateBlocker TopBlocker 0 0 640 400
+STORE TopBlocker TOUCH BLOCK Spidey TopBlocker
+
+************************************
+* Pickup1
+************************************
+SPRITENAME Pickup1
+LOADFRAMES Pickup1 Art\global\Pickups\pkup Rotate
+SETPOSITION Pickup1 145 1723 0
+SHOW Pickup1
+SPRITEFPS Pickup1 10
+CANLOOP Pickup1 Rotate TRUE
+PLAYANIM Pickup1 Rotate
+ANTIALIAS Pickup1
+
+STORE Pickup1 TOUCH IF Pickup1 = 1 RETURN
+STORE Pickup1 TOUCH SET Pickup1 = 1
+STORE Pickup1 TOUCH BONUSPOINTS Pickup1 0 -20 fPickupPoints
+STORE Pickup1 TOUCH HIDE Pickup1
+STORE Pickup1 TOUCH SOUND sounds\global\pickup1.wav
+
+************************************
+* Pickup2
+************************************
+SPRITENAME Pickup2
+LOADFRAMES Pickup2 Art\global\Pickups\pkup Rotate
+SETPOSITION Pickup2 579 1057 0
+SHOW Pickup2
+SPRITEFPS Pickup2 10
+CANLOOP Pickup2 Rotate TRUE
+PLAYANIM Pickup2 Rotate
+ANTIALIAS Pickup2
+
+STORE Pickup2 TOUCH IF Pickup2 = 1 RETURN
+STORE Pickup2 TOUCH SET Pickup2 = 1
+STORE Pickup2 TOUCH BONUSPOINTS Pickup2 0 -20 fPickupPoints
+STORE Pickup2 TOUCH HIDE Pickup2
+STORE Pickup2 TOUCH SOUND sounds\global\pickup1.wav
+
+************************************
+* Pickup3
+************************************
+SPRITENAME Pickup3
+LOADFRAMES Pickup3 Art\global\Pickups\pkup Rotate
+SETPOSITION Pickup3 300 414 0
+SHOW Pickup3
+SPRITEFPS Pickup3 10
+CANLOOP Pickup3 Rotate TRUE
+PLAYANIM Pickup3 Rotate
+ANTIALIAS Pickup3
+
+STORE Pickup3 TOUCH IF Pickup3 = 1 RETURN
+STORE Pickup3 TOUCH SET Pickup3 = 1
+STORE Pickup3 TOUCH BONUSPOINTS Pickup3 0 -20 fPickupPoints
+STORE Pickup3 TOUCH HIDE Pickup3
+STORE Pickup3 TOUCH SOUND sounds\global\pickup1.wav
+
+EXECUTE game CreateBinkBlocker octop 154 0 Art\WallCrawl\BuildingCfluff\OC\OCtop3.bik octop
+STORE octop TOUCH BLOCK Spidey octop
+
+SPRITENAME spidey
+
+SPRITENAME fpl
+ADDFRAME fpl Art\WallCrawl\BuildingCfluff\objectlayers\FPL.bmp base
+SETPOSITION fpl 310 1575 0
+SHOW fpl
+SPRITEFPS fpl 10
+PLAYANIM fpl base
+
+********************
+SPRITENAME freebird
+LOADFRAMES freebird Art\WallCrawl\BuildingBFluff\BirdLR\BirdLR FlyLR
+LOADFRAMES freebird Art\WallCrawl\BuildingBFluff\BirdLR\BirdRL FlyRL
+SETPOSITION freebird 10 854 0
+SHOW freebird
+SPRITEFPS freebird 12
+CANLOOP freebird FlyLR
+CANLOOP freebird FlyRL
+PLAYANIM freebird FlyLR
+COLLISIONTYPE freebird FORCERECT
+HOTSPOTAREA freebird 32 32 40 40
+CENTEROFFSET freebird01 10 10
+
+
+STORE freebird TOUCH EXECUTE Spidey DebrisHit 1
+MOVETO freebird 640 freebird^Y 150
+
+STORE freebird Arrived IF freebird^X = 640 MOVETO freebird 0 freebird^Y 150
+STORE freebird Arrived IF freebird^X = 640 PLAYANIM freebird FlyRL
+STORE freebird Arrived IF freebird^X = 0 MOVETO freebird 640 freebird^Y 150
+STORE freebird Arrived IF freebird^X = 0 PLAYANIM freebird FlyLR
+
+
+********************
+SPRITENAME freebird01
+LOADFRAMES freebird01 Art\WallCrawl\BuildingBFluff\BirdLR\BirdLR FlyLR
+LOADFRAMES freebird01 Art\WallCrawl\BuildingBFluff\BirdLR\BirdRL FlyRL
+SETPOSITION freebird01 10 1445 0
+SHOW freebird01
+SPRITEFPS freebird01 12
+CANLOOP freebird01 FlyLR
+CANLOOP freebird01 FlyRL
+PLAYANIM freebird01 FlyLR
+COLLISIONTYPE freebird01 FORCERECT
+HOTSPOTAREA freebird01 32 32 40 40
+CENTEROFFSET freebird01 10 10
+
+
+STORE freebird01 TOUCH EXECUTE Spidey DebrisHit 1
+MOVETO freebird01 640 freebird01^Y 150
+
+STORE freebird01 Arrived IF freebird01^X = 640 MOVETO freebird01 0 freebird01^Y 150
+STORE freebird01 Arrived IF freebird01^X = 640 PLAYANIM freebird01 FlyRL
+STORE freebird01 Arrived IF freebird01^X = 0 MOVETO freebird01 640 freebird01^Y 150
+STORE freebird01 Arrived IF freebird01^X = 0 PLAYANIM freebird01 FlyLR

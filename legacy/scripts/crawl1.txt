@@ -1,0 +1,263 @@
+BACKGROUND art\WallCrawl\bldA.bmp
+SET gCurrentGame = Crawl
+set gsGameFileName = scripts\crawl.txt
+set GAME_fCurrentHigh = gCrawlHigh
+
+EXECUTE game CreateBlocker ScreenBottom 0 2393 639 6
+STORE ScreenBottom TOUCH BLOCK Spidey ScreenBottom
+
+EXECUTE game CreateBinkBlocker short 363 1345 art\WallCrawl\BuildingAFluff\Shortcircuts\short.bik spark1
+STORE short TOUCH EXECUTE Spidey DebrisHit 2
+HOTSPOTAREA short 61 19 82 90
+
+EXECUTE game CreateBlocker lowdrain 8 1749 115 87
+STORE lowdrain TOUCH BLOCK Spidey lowdrain
+
+EXECUTE game CreateBlocker ShortWin1 515 1231 65 78
+STORE ShortWin1 TOUCH BLOCK Spidey ShortWin1
+
+EXECUTE game CreateBlocker ShortWin2 376 1236 60 75
+STORE ShortWin2 TOUCH BLOCK Spidey ShortWin2
+
+EXECUTE game CreateBlocker ShortWin3 373 1379 68 79
+STORE ShortWin3 TOUCH BLOCK Spidey ShortWin3
+
+EXECUTE game CreateBlocker ShortWin4 510 1379 71 81
+STORE ShortWin4 TOUCH BLOCK Spidey ShortWin4
+
+EXECUTE game CreateBinkBlocker BirdHover 306 1540 art\WallCrawl\BuildingAFluff\Birds\birdfly.bik fly
+SHOW BirdHover
+STORE BirdHover TOUCH BLOCK Spidey BirdHover
+SET BirdHover^Type = 2
+
+EXECUTE game CreateBinkBlocker madgirl 289 873 art\WallCrawl\BuildingAFluff\madgirl\madgirl.bik mad
+STORE madgirl TOUCH BLOCK Spidey madgirl
+
+*EXECUTE game CreateFrameBlocker cables 393 63 art\WallCrawl\BuildingAFluff\Layerobjects\cables.bmp cables
+*SET cables^Type = 0
+
+*EXECUTE game CreateFrameBlocker line 404 358 art\WallCrawl\BuildingAFluff\Layerobjects\line.bmp line
+*SET line^Type = 0
+
+EXECUTE game CreateBlocker ScreenLeft -30 0 40 2400
+STORE ScreenLeft TOUCH BLOCK Spidey ScreenLeft
+
+EXECUTE game CreateBlocker ScreenRight 640 0 40 2400
+STORE ScreenRight TOUCH BLOCK Spidey ScreenRight
+
+EXECUTE game CreateBlocker WIN1 376 142 62 72
+STORE WIN1 TOUCH BLOCK Spidey WIN1
+
+EXECUTE game CreateBlocker WIN2 62 142 61 74
+STORE WIN2 TOUCH BLOCK Spidey WIN2
+
+EXECUTE game CreateBlocker WIN3 196 140 65 77
+STORE WIN3 TOUCH BLOCK Spidey WIN3
+
+EXECUTE game CreateBlocker WIN4 511 141 63 73
+STORE WIN4 TOUCH BLOCK Spidey WIN4
+
+*EXECUTE game CreateBlocker LEFTSIDE 0 72 121 997
+*STORE LEFTSIDE TOUCH BLOCK Spidey LEFTSIDE
+
+EXECUTE game CreateBlocker TOPLEFTLEDGE 0 1125 95 40
+STORE TOPLEFTLEDGE TOUCH BLOCK Spidey TOPLEFTLEDGE
+
+EXECUTE game CreateBlocker TOPLEFTLEDGEDRAIN 0 1166 54 59
+STORE TOPLEFTLEDGEDRAIN TOUCH BLOCK Spidey TOPLEFTLEDGEDRAIN
+
+EXECUTE game CreateBlocker TOPRIGHTLEDGE 188 1122 451 43
+STORE TOPRIGHTLEDGE TOUCH BLOCK Spidey TOPRIGHTLEDGE
+
+EXECUTE game CreateBlocker WIN5 59 286 64 76
+STORE WIN5 TOUCH BLOCK Spidey WIN5
+
+EXECUTE game CreateBlocker WIN6 195 284 65 77
+STORE WIN6 TOUCH BLOCK Spidey WIN6
+
+EXECUTE game CreateBlocker WIN7 507 284 69 81
+STORE WIN7 TOUCH BLOCK Spidey WIN7
+
+EXECUTE game CreateBlocker WIN8 59 449 64 75
+STORE WIN8 TOUCH BLOCK Spidey WIN8
+
+EXECUTE game CreateBlocker WIN8a 195 447 64 78
+STORE WIN8a TOUCH BLOCK Spidey WIN8a
+
+EXECUTE game CreateBlocker WIN9 372 448 68 75
+STORE WIN9 TOUCH BLOCK Spidey WIN9
+
+EXECUTE game CreateBlocker WIN10 508 446 69 78
+STORE WIN10 TOUCH BLOCK Spidey WIN10
+
+EXECUTE game CreateBlocker LEDGEVERYTOPLEFT 0 573 410 43
+STORE LEDGEVERYTOPLEFT TOUCH BLOCK Spidey LEDGEVERYTOPLEFT
+
+EXECUTE game CreateBlocker LEDGEVERYTOPRIGHT 548 578 91 39
+STORE LEDGEVERYTOPRIGHT TOUCH BLOCK Spidey LEDGEVERYTOPRIGHT
+
+EXECUTE game CreateBlocker WIN11 57 677 62 81
+STORE WIN11 TOUCH BLOCK Spidey WIN11
+
+EXECUTE game CreateBlocker WIN12 193 675 69 82
+STORE WIN12 TOUCH BLOCK Spidey WIN12
+
+EXECUTE game CreateBlocker WIN13 373 676 68 82
+STORE WIN13 TOUCH BLOCK Spidey WIN13
+
+EXECUTE game CreateBlocker WIN13aa 512 677 66 78
+STORE WIN13aa TOUCH BLOCK Spidey WIN13aa
+
+EXECUTE game CreateBlocker WIN13bb 511 847 67 78
+STORE WIN13bb TOUCH BLOCK Spidey WIN13bb
+
+EXECUTE game CreateBlocker topblock2 0 318 640 46
+STORE WIN13bb TOUCH BLOCK Spidey WIN13bb
+
+EXECUTE game CreateBlocker leftguttop 0 318 640 46
+STORE leftguttop TOUCH BLOCK Spidey leftguttop
+
+EXECUTE game CreateBlocker WOMAN 200 824 243 104
+STORE WOMAN TOUCH BLOCK Spidey WOMAN
+
+EXECUTE game CreateBlocker WOMAN2 288 802 89 29
+STORE WOMAN2 TOUCH BLOCK Spidey WOMAN2
+
+EXECUTE game CreateBlocker WIN14 59 843 63 81
+STORE WIN14 TOUCH BLOCK Spidey WIN14
+
+EXECUTE game CreateBlocker WIN15 58 996 61 76
+STORE WIN15 TOUCH BLOCK Spidey WIN15
+
+EXECUTE game CreateBlocker WIN16 193 995 67 75
+STORE WIN16 TOUCH BLOCK Spidey WIN16
+
+EXECUTE game CreateBlocker WIN17 373 995  68 78
+STORE WIN17 TOUCH BLOCK Spidey WIN17
+
+EXECUTE game CreateBlocker WIN18 509 995 70 77
+STORE WIN18 TOUCH BLOCK Spidey WIN18
+
+*EXECUTE game CreateBlocker LEFTSIDEBYBIRD 0 1160 140 511
+*STORE LEFTSIDEBYBIRD TOUCH BLOCK Spidey LEFTSIDEBYBIRD
+
+EXECUTE game CreateBlocker WINLSB1 4 1378 115 80
+STORE WINLSB1 TOUCH BLOCK Spidey WINLSB1
+
+EXECUTE game CreateBlocker WINLSB2 57 1229 66 82
+STORE WINLSB2 TOUCH BLOCK Spidey WINLSB2
+
+EXECUTE game CreateBlocker LedgeL1 0 1651 370 39
+STORE LedgeL1 TOUCH BLOCK Spidey LedgeL1
+
+EXECUTE game CreateBlocker LedgeR1 513 1649 126 39
+STORE LedgeR1 TOUCH BLOCK Spidey LedgeR1
+
+EXECUTE game CreateBlocker WINC1 55 1528 66 83
+STORE WINC1 TOUCH BLOCK Spidey WINC1
+
+EXECUTE game CreateBlocker WINC2 195 1534 64 77
+STORE WINC2 TOUCH BLOCK Spidey WINC2
+
+EXECUTE game CreateBlocker WINC3 375 1534 65 75
+STORE WINC3 TOUCH BLOCK Spidey WINC3
+
+EXECUTE game CreateBlocker WINC4 514 1536 66 75
+STORE WINC4 TOUCH BLOCK Spidey WINC4
+
+EXECUTE game CreateBlocker WIN17a 193 1233 67 76
+STORE WIN17a TOUCH BLOCK Spidey WIN17a
+
+EXECUTE game CreateBlocker WIN18a 196 1383 62 75
+STORE WIN18a TOUCH BLOCK Spidey WIN18a
+
+*EXECUTE game CreateBlocker LOWERLEFTSIDE 0 1693 120 161
+*STORE LOWERLEFTSIDE TOUCH BLOCK Spidey LOWERLEFTSIDE
+
+EXECUTE game CreateBlocker LOWERLEFTSIDE1 0 1901 122 81
+STORE LOWERLEFTSIDE1 TOUCH BLOCK Spidey LOWERLEFTSIDE1
+
+EXECUTE game CreateBlocker LOWERLEFTSIDE2 0 1982 56 208
+STORE LOWERLEFTSIDE2 TOUCH BLOCK Spidey LOWERLEFTSIDE2
+
+EXECUTE game CreateBlocker WINWITHCLOTHS 193 1754 249 76
+STORE WINWITHCLOTHS TOUCH BLOCK Spidey WINWITHCLOTHS
+
+EXECUTE game CreateBlocker WIN19 514 1753 66 77
+STORE WIN19 TOUCH BLOCK Spidey WIN19
+
+EXECUTE game CreateBlocker WIN20 191 1904 70 78
+STORE WIN20 TOUCH BLOCK Spidey WIN20
+
+EXECUTE game CreateBlocker WIN21 376 1905 64 76
+STORE WIN21 TOUCH BLOCK Spidey WIN21
+
+EXECUTE game CreateBlocker WIN22 515 1905 67 78
+STORE WIN22 TOUCH BLOCK Spidey WIN22
+
+EXECUTE game CreateBlocker WIN23 53 2059 65 77
+STORE WIN23 TOUCH BLOCK Spidey WIN23
+
+EXECUTE game CreateBlocker WIN24 193 2057 67 80
+STORE WIN24 TOUCH BLOCK Spidey WIN24
+
+EXECUTE game CreateBlocker WIN25 377 2059 65 77
+STORE WIN25 TOUCH BLOCK Spidey WIN25
+
+EXECUTE game CreateBlocker WIN26 518 2059 121 148
+STORE WIN26 TOUCH BLOCK Spidey WIN26
+
+*EXECUTE game CreateBinkBlocker washer 305 469 art\WallCrawl\BuildingAFluff\windowwasher\washer.bik wash
+*STORE washer TOUCH BLOCK Spidey washer
+*HOTSPOTAREA washer 0 0 100 100
+
+EXECUTE game CreateBinkSprite octop 0 0 Art\WallCrawl\BuildingAfluff\OC\OCtop1.bik octop
+HIDE octop
+*STORE octop TOUCH BLOCK Spidey octop
+
+************************************
+* Pickup1
+************************************
+SPRITENAME Pickup1
+LOADFRAMES Pickup1 Art\global\Pickups\pkup Rotate
+SETPOSITION Pickup1 66 1473 0
+SHOW Pickup1
+SPRITEFPS Pickup1 10
+CANLOOP Pickup1 Rotate TRUE
+PLAYANIM Pickup1 Rotate
+ANTIALIAS Pickup1
+
+STORE Pickup1 TOUCH IF Pickup1 = 1 RETURN
+STORE Pickup1 TOUCH SET Pickup1 = 1
+STORE Pickup1 TOUCH BONUSPOINTS Pickup1 0 -20 fPickupPoints
+STORE Pickup1 TOUCH HIDE Pickup1
+STORE Pickup1 TOUCH SOUND sounds\global\pickup1.wav
+
+************************************
+* Pickup2
+************************************
+SPRITENAME Pickup2
+LOADFRAMES Pickup2 Art\global\Pickups\pkup Rotate
+SETPOSITION Pickup2 372 768 0
+SHOW Pickup2
+SPRITEFPS Pickup2 10
+CANLOOP Pickup2 Rotate TRUE
+PLAYANIM Pickup2 Rotate
+ANTIALIAS Pickup2
+
+STORE Pickup2 TOUCH IF Pickup2 = 1 RETURN
+STORE Pickup2 TOUCH SET Pickup2 = 1
+STORE Pickup2 TOUCH BONUSPOINTS Pickup2 0 -20 fPickupPoints
+STORE Pickup2 TOUCH HIDE Pickup2
+STORE Pickup2 TOUCH SOUND sounds\global\pickup1.wav
+
+* This class is declared here for proper sorting with the art and its functionality is fleshed out in crawl.txt
+SPRITENAME Spidey
+
+EXECUTE game CreateBlocker BOTTOM 0 2183 639 215
+STORE BOTTOM TOUCH BLOCK Spidey BOTTOM
+
+EXECUTE game CreateFrameBlocker drain1 14 1332 art\WallCrawl\BuildingAFluff\Layerobjects\Drain1.bmp drain1
+SET drain1^Type = 0
+EXECUTE game CreateFrameBlocker drain2 16 1818 art\WallCrawl\BuildingAFluff\Layerobjects\Drain2.bmp drain2
+SET drain2^Type = 0

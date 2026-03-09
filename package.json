@@ -1,0 +1,8 @@
+﻿{
+  "name": "spiderman-menu-web-port",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  }
+}

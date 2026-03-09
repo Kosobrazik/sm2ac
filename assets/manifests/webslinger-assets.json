@@ -1,0 +1,387 @@
+﻿{
+    "generatedAt":  "2026-03-09T13:48:49Z",
+    "sourceRoot":  "original assets/Art/webslinger",
+    "outputs":  {
+                    "artRoot":  "assets/art/webslinger",
+                    "videoRoot":  "assets/video/webslinger",
+                    "soundRoot":  "assets/sounds/webslinger"
+                },
+    "summary":  {
+                    "images":  {
+                                   "total":  1,
+                                   "converted":  1,
+                                   "skipped":  0
+                               },
+                    "videos":  {
+                                   "total":  39,
+                                   "converted":  39,
+                                   "skipped":  0
+                               },
+                    "sounds":  {
+                                   "total":  31,
+                                   "copied":  30,
+                                   "skipped":  1
+                               }
+                },
+    "images":  [
+                   {
+                       "category":  "background",
+                       "source":  "original assets\\Art\\webslinger\\background.bmp",
+                       "target":  "assets\\art\\webslinger\\background.png"
+                   }
+               ],
+    "videos":  [
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Evening\\Confuse_Evening.bik",
+                       "target":  "assets\\video\\webslinger\\Evening\\Confuse_Evening.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Evening\\Left_evening.bik",
+                       "target":  "assets\\video\\webslinger\\Evening\\Left_evening.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Evening\\Right_evening.bik",
+                       "target":  "assets\\video\\webslinger\\Evening\\Right_evening.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Evening\\ST1_VA_Evening.bik",
+                       "target":  "assets\\video\\webslinger\\Evening\\ST1_VA_Evening.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Evening\\ST1_VB_Evening.bik",
+                       "target":  "assets\\video\\webslinger\\Evening\\ST1_VB_Evening.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Evening\\ST1_VC_Evening.bik",
+                       "target":  "assets\\video\\webslinger\\Evening\\ST1_VC_Evening.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Evening\\ST2_VA_Evening.bik",
+                       "target":  "assets\\video\\webslinger\\Evening\\ST2_VA_Evening.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Evening\\ST2_VB_Evening.bik",
+                       "target":  "assets\\video\\webslinger\\Evening\\ST2_VB_Evening.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Evening\\ST2_VC_Evening.bik",
+                       "target":  "assets\\video\\webslinger\\Evening\\ST2_VC_Evening.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Evening\\Victory_Evening.bik",
+                       "target":  "assets\\video\\webslinger\\Evening\\Victory_Evening.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\MAPS\\Stage_1.bik",
+                       "target":  "assets\\video\\webslinger\\MAPS\\Stage_1.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\MAPS\\stage_2.bik",
+                       "target":  "assets\\video\\webslinger\\MAPS\\stage_2.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\MAPS\\stage_3.bik",
+                       "target":  "assets\\video\\webslinger\\MAPS\\stage_3.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\MAPS\\stage_4.bik",
+                       "target":  "assets\\video\\webslinger\\MAPS\\stage_4.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\MAPS\\stage_5.bik",
+                       "target":  "assets\\video\\webslinger\\MAPS\\stage_5.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\MAPS\\stage_6.bik",
+                       "target":  "assets\\video\\webslinger\\MAPS\\stage_6.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\MAPS\\stage_7.bik",
+                       "target":  "assets\\video\\webslinger\\MAPS\\stage_7.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\MAPS\\stage_8.bik",
+                       "target":  "assets\\video\\webslinger\\MAPS\\stage_8.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\MAPS\\stage_9.bik",
+                       "target":  "assets\\video\\webslinger\\MAPS\\stage_9.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Night\\Confuse_Night.bik",
+                       "target":  "assets\\video\\webslinger\\Night\\Confuse_Night.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Night\\Left_Night.bik",
+                       "target":  "assets\\video\\webslinger\\Night\\Left_Night.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Night\\Right_Night.bik",
+                       "target":  "assets\\video\\webslinger\\Night\\Right_Night.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Night\\ST1_VA_Night.bik",
+                       "target":  "assets\\video\\webslinger\\Night\\ST1_VA_Night.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Night\\ST1_VB_Night.bik",
+                       "target":  "assets\\video\\webslinger\\Night\\ST1_VB_Night.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Night\\ST1_VC_Night.bik",
+                       "target":  "assets\\video\\webslinger\\Night\\ST1_VC_Night.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Night\\ST2_VA_Night.bik",
+                       "target":  "assets\\video\\webslinger\\Night\\ST2_VA_Night.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Night\\ST2_VB_Night.bik",
+                       "target":  "assets\\video\\webslinger\\Night\\ST2_VB_Night.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Night\\ST2_VC_Night.bik",
+                       "target":  "assets\\video\\webslinger\\Night\\ST2_VC_Night.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Night\\Victory_Night.bik",
+                       "target":  "assets\\video\\webslinger\\Night\\Victory_Night.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Noon\\Confuse_Noon.bik",
+                       "target":  "assets\\video\\webslinger\\Noon\\Confuse_Noon.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Noon\\Left_Noon.bik",
+                       "target":  "assets\\video\\webslinger\\Noon\\Left_Noon.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Noon\\Right_Noon.bik",
+                       "target":  "assets\\video\\webslinger\\Noon\\Right_Noon.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Noon\\ST1_VA_Noon.bik",
+                       "target":  "assets\\video\\webslinger\\Noon\\ST1_VA_Noon.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Noon\\ST1_VB_Noon.bik",
+                       "target":  "assets\\video\\webslinger\\Noon\\ST1_VB_Noon.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Noon\\ST1_VC_Noon.bik",
+                       "target":  "assets\\video\\webslinger\\Noon\\ST1_VC_Noon.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Noon\\ST2_VA_Noon.bik",
+                       "target":  "assets\\video\\webslinger\\Noon\\ST2_VA_Noon.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Noon\\ST2_VB_Noon.bik",
+                       "target":  "assets\\video\\webslinger\\Noon\\ST2_VB_Noon.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Noon\\ST2_VC_Noon.bik",
+                       "target":  "assets\\video\\webslinger\\Noon\\ST2_VC_Noon.webm"
+                   },
+                   {
+                       "category":  "misc",
+                       "source":  "original assets\\Art\\webslinger\\Noon\\Victory_Noon.bik",
+                       "target":  "assets\\video\\webslinger\\Noon\\Victory_Noon.webm"
+                   }
+               ],
+    "sounds":  [
+                   {
+                       "category":  "ui-action",
+                       "source":  "original assets\\Sounds\\webslinger\\leftclick.wav",
+                       "target":  "assets\\sounds\\webslinger\\leftclick.wav"
+                   },
+                   {
+                       "category":  "ui-action",
+                       "source":  "original assets\\Sounds\\webslinger\\miss.wav",
+                       "target":  "assets\\sounds\\webslinger\\miss.wav"
+                   },
+                   {
+                       "category":  "ui-action",
+                       "source":  "original assets\\Sounds\\webslinger\\rightclick.wav",
+                       "target":  "assets\\sounds\\webslinger\\rightclick.wav"
+                   },
+                   {
+                       "category":  "ambient",
+                       "source":  "original assets\\Sounds\\webslinger\\wsamb.wav",
+                       "target":  "assets\\sounds\\webslinger\\wsamb.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wsdo001.wav",
+                       "target":  "assets\\sounds\\webslinger\\wsdo001.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wsdo002.wav",
+                       "target":  "assets\\sounds\\webslinger\\wsdo002.wav"
+                   },
+                   {
+                       "category":  "music-loop",
+                       "source":  "original assets\\Sounds\\webslinger\\wsloop001.wav",
+                       "target":  "assets\\sounds\\webslinger\\wsloop001.wav"
+                   },
+                   {
+                       "category":  "music-loop",
+                       "source":  "original assets\\Sounds\\webslinger\\wsloop002.wav",
+                       "target":  "assets\\sounds\\webslinger\\wsloop002.wav"
+                   },
+                   {
+                       "category":  "music-loop",
+                       "source":  "original assets\\Sounds\\webslinger\\wsloop003.wav",
+                       "target":  "assets\\sounds\\webslinger\\wsloop003.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm001.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm001.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm002.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm002.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm003.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm003.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm004.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm004.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm005.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm005.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm006.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm006.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm007.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm007.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm008.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm008.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm009.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm009.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm010.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm010.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm011.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm011.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm012.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm012.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm013.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm013.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm014.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm014.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm015.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm015.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm016.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm016.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm017.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm017.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm018.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm018.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssm019.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssm019.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssmintro.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssmintro.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssmlose.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssmlose.wav"
+                   },
+                   {
+                       "category":  "voice",
+                       "source":  "original assets\\Sounds\\webslinger\\wssmwin.wav",
+                       "target":  "assets\\sounds\\webslinger\\wssmwin.wav"
+                   }
+               ]
+}
